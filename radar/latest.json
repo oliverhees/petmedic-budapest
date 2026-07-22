@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-22T12:52:16.731Z",
+ "generatedAt": "2026-07-22T15:58:33.712Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 30,
+ "newCount": 1,
+ "totalMatching": 31,
  "items": [
+  {
+   "id": "780858",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-garam-utca-31m2-1-szoba_780858",
+   "district": "XIII",
+   "m2": 31,
+   "rooms": "1",
+   "street": "Garam Utca",
+   "priceFt": 195000,
+   "firstSeen": "2026-07-22T15:58:33.712Z",
+   "initial": false
+  },
   {
    "id": "780782",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-rona-utca-53m2-2-szoba_780782",
