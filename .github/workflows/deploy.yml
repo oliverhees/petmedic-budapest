@@ -9,7 +9,7 @@ name: Deploy (StatiCrypt → GitHub Pages)
 
 on:
   push:
-    branches: [main]
+    branches: [main, claude/repo-integration-lf44rm]
   workflow_dispatch:
 
 permissions:
@@ -63,6 +63,9 @@ jobs:
 
   deploy:
     needs: build
+    # GitHub erlaubt Pages-Deployments nur vom Default-Branch —
+    # auf anderen Branches wird nur gebaut, nicht deployt (kein Fehlschlag).
+    if: github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     environment:
       name: github-pages

@@ -43,7 +43,9 @@
   }
   header.hero .flag{font-size:34px;letter-spacing:4px}
   header.hero h1{font-size:1.7rem;margin:.35em 0 .15em;line-height:1.2}
-  header.hero p{color:var(--muted);margin:.2em auto 0;max-width:44ch}
+  header.hero p{color:var(--muted);margin:.2em auto 0;max-width:46ch}
+  .stand{display:inline-block;margin-top:12px;font-size:.75rem;font-weight:700;color:var(--teal);
+    border:1px solid rgba(45,212,191,.35);background:rgba(45,212,191,.08);padding:4px 12px;border-radius:999px}
 
   nav.toc{
     position:sticky;top:0;z-index:20;
@@ -83,9 +85,9 @@
   .tldr li{margin:.5em 0}
   .tldr b{color:#fff}
 
-  table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.6em 0}
-  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}
-  th{color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.4px}
+  table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.6em 0}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.4px}
   td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
   .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 
@@ -101,6 +103,14 @@
   .note b{color:#fff}
 
   code.kw{background:#08111e;border:1px solid var(--line);color:var(--teal);padding:2px 7px;border-radius:6px;font-size:.88em}
+
+  details{border:1px solid var(--line);border-radius:12px;background:var(--card2);margin:.7em 0;overflow:hidden}
+  details summary{cursor:pointer;padding:12px 14px;font-weight:700;color:var(--teal);list-style:none;display:flex;align-items:center;gap:8px}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"▸";margin-left:auto;transition:transform .2s;color:var(--muted)}
+  details[open] summary::after{transform:rotate(90deg)}
+  details .inner{padding:0 14px 14px;border-top:1px solid var(--line)}
+  blockquote{margin:.6em 0;padding:10px 14px;border-left:3px solid var(--accent);background:rgba(96,165,250,.06);border-radius:0 10px 10px 0;font-size:.92rem;white-space:pre-line}
 
   /* budget calculator */
   .calc label{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;margin:14px 0 4px;color:var(--muted)}
@@ -135,6 +145,7 @@
   .contact-grid .k{color:var(--muted)}
   .contact-grid .v{text-align:right;font-weight:600}
 
+  .src-group{margin:1em 0 .4em;font-weight:700;color:var(--teal);font-size:.9rem}
   .sources{columns:1;font-size:.82rem}
   .sources a{display:block;padding:5px 0;border-bottom:1px solid var(--line);color:var(--muted);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .sources a:active{color:var(--teal)}
@@ -157,15 +168,20 @@
 <header class="hero">
   <div class="flag">🇭🇺 🐕 🐕</div>
   <h1>Dein Budapest-Plan</h1>
-  <p>Alles für den Start am McDaniel College – Wohnung, Budget, Finanzierung, Hunde &amp; Behörden. Mobil, offline nutzbar, immer griffbereit.</p>
+  <p>Alles für den Start am McDaniel College – Wohnungssuche, Budget, Vertrag &amp; Recht, Finanzierung, Hunde &amp; Behörden. Mobil, offline nutzbar, immer griffbereit.</p>
+  <span class="stand">Recherche-Stand: 22. Juli 2026 · 55+ live geprüfte Quellen · Kurs: 1 € ≈ 364 Ft (MNB)</span>
 </header>
 
 <nav class="toc" aria-label="Inhalt">
   <div class="wrap">
     <a href="#tldr">⚡ Kurz</a>
-    <a href="#wohnen">🏠 Wohnung</a>
+    <a href="#timing">⏰ Timing</a>
+    <a href="#wohnen">🏠 Markt</a>
+    <a href="#portale">🔎 Portale</a>
+    <a href="#vertrag">📄 Vertrag</a>
+    <a href="#betrug">🚨 Sicherheit</a>
     <a href="#budget">💶 Budget</a>
-    <a href="#geld">💰 Finanzierung</a>
+    <a href="#geld">💰 Geld</a>
     <a href="#hunde">🐕 Hunde</a>
     <a href="#behoerden">📋 Behörden</a>
     <a href="#college">🎓 College</a>
@@ -181,65 +197,321 @@
     <div class="card tldr">
       <h2>⚡ In 30 Sekunden</h2>
       <ol>
-        <li><b>Die 730–800 € sind der „Ausländer-Preis".</b> Auf dem ungarischen Markt (ingatlan.com) ist eine haustierfreundliche 30 m²-Wohnung für <b>~450–580 € kalt</b> realistisch – das spart 170–240 € pro Monat.</li>
-        <li><b>Eigene Wohnung ist gesetzt</b> wegen der zwei Hunde 🐕🐕 – der Schlüssel ist der richtige Bezirk (Zugló!) und der Suchbegriff <code class="kw">kisállatbarát</code>.</li>
-        <li><b>BAföG fürs Vorbereitungsjahr: nein.</b> Aber sobald das echte Medizinstudium läuft (Semmelweis o. zurück in DE), gibt's <b>volles Auslands-BAföG</b> – das schon jetzt vorbereiten.</li>
+        <li><b>Kleine Wohnungen (≤ 40 m²) kosten in Budapest im Median 200.000 Ft ≈ 550 €</b> – in den richtigen Bezirken (Zugló, Kispest, äußeres VIII./IX.) sind <b>440–580 € kalt</b> realistisch. Die 730–800 € von deutschen Portalen sind das obere Marktdrittel.</li>
+        <li><b>⏰ Das Zeitfenster:</b> Am <b>23. Juli (~20 Uhr) werden die Uni-Zulassungen verkündet</b> – danach rollt die größte Nachfragewelle des Jahres bis Ende September. 2026 ist die Nachfrage zwar schwächer als sonst, aber das Angebot schrumpft: Gute günstige Wohnungen sind „binnen Stunden oder Tagen" weg. <b>Jetzt suchen oder auf Oktober ausweichen.</b></li>
+        <li><b>BAföG fürs Vorbereitungsjahr: nein.</b> Aber fürs anschließende Medizinstudium (Semmelweis o. zurück in DE) gibt's <b>volles Auslands-BAföG</b> – jetzt schon vorbereiten.</li>
       </ol>
-      <div class="note tip"><b>Die Restlücke</b> (~60–260 €/Monat) schließt am elegantesten ein <b>Remote-Minijob für einen deutschen Arbeitgeber</b>: deutsches Lohnniveau, ungarische Lebenshaltungskosten. 😉</div>
+      <div class="note tip"><b>Mit 2 Hunden gilt:</b> ehrlich sein, Hunde-Portfolio + Zusatzkaution anbieten (üblich: 3 statt 2 Monatsmieten oder 200–500 € extra) – und alles schriftlich in den Vertrag. Fertige Anfrage-Vorlagen auf Ungarisch &amp; Englisch: <a href="#vorlagen">hier</a>.</div>
     </div>
   </section>
 
-  <!-- WOHNEN -->
+  <!-- TIMING -->
+  <section id="timing">
+    <h2>⏰ Timing: Der Markt genau jetzt</h2>
+    <div class="card">
+      <h3>Was diese Woche passiert</h3>
+      <ul>
+        <li><b>Do., 23.07.2026, ca. 20:00 Uhr: „Ponthúzás"</b> – die Punktegrenzen der Uni-Zulassungen werden verkündet. Traditionell startet damit die <b>größte Mietnachfrage-Welle des Jahres</b> (bis Ende September).</li>
+        <li><b>2026-Besonderheit:</b> Die Nachfrage ist so schwach wie seit 5 Jahren nicht (−4 % Anfragen ggü. Vorjahr, weil das Kaufprogramm „Otthon Start" Mieter in den Kaufmarkt zieht). <b>Aber:</b> Das Angebot schrumpft ebenfalls (−3,4 % allein Juni→Juli). Ergebnis laut ingatlan.com: Für gute Objekte bleibt <b>weniger Zeit pro Entscheidung</b>.</li>
+        <li><b>Preistrend:</b> Amtlicher KSH-Index Juni: +4,7 % zum Vorjahr – die <b>schwächste Juni-Verteuerung seit 2020</b>. Die billigen Pester Außenbezirke wurden zuletzt sogar günstiger (−1,5 % im Monat). Es gibt <b>Verhandlungsspielraum</b>, den es in früheren Jahren nicht gab.</li>
+      </ul>
+      <h3>Konkreter Fahrplan</h3>
+      <ul class="rank">
+        <li><span class="medal">1️⃣</span><div><b>Diese Woche = letztes ruhiges Fenster.</b> Suchagenten sofort aktivieren, Besichtigungen (auch per Video) noch vor dem Wochenende fixieren.</div></li>
+        <li><span class="medal">2️⃣</span><div><b>Entscheidungsfähig sein:</b> Kaution (2–3 Monatsmieten) + 1. Miete verfügbar halten und binnen 24–48 h zusagen können. Nicht auf fallende Sommerpreise spekulieren.</div></li>
+        <li><span class="medal">3️⃣</span><div><b>Plan B, falls bis Mitte August nichts passt:</b> Übergangslösung für 1–3 Monate (z. B. Flatio – Nebenkosten inklusive, kautionsfrei unter 180 Tagen) und regulär im <b>Oktober/November</b> suchen, wenn der Konkurrenzdruck regelmäßig nachlässt.</div></li>
+      </ul>
+      <div class="note">Nächste harte Datenlage: Der KSH-Mietindex für Juli erscheint am <b>10. August 2026</b>.</div>
+    </div>
+  </section>
+
+  <!-- MARKT -->
   <section id="wohnen">
-    <h2>🏠 Wohnungs-Guide</h2>
-    <p class="sub">Der größte Hebel fürs Budget. Eigene 30 m²-Wohnung mit 2 Hunden – so wird's bezahlbar.</p>
+    <h2>🏠 Markt &amp; Bezirke</h2>
+    <p class="sub">Alle Zahlen: Juni/Juli 2026, umgerechnet mit dem amtlichen MNB-Kurs vom 22.07.2026 (1 € = 364 Ft).</p>
 
     <div class="card">
-      <h3>💰 Die Zahlen-Realität</h3>
-      <p class="sub">Stand Juli 2026 · Wechselkurs ~395 Ft = 1 €</p>
+      <h3>💰 Die Zahlen-Realität (verifiziert Juli 2026)</h3>
       <div class="tbl-scroll">
         <table>
           <thead><tr><th>Was</th><th>Forint</th><th>In Euro</th></tr></thead>
           <tbody>
-            <tr><td>Garzon (1-Zimmer), Spanne</td><td class="num">170.000–300.000 Ft</td><td class="num">~430–760 €</td></tr>
-            <tr><td>Budapest-Durchschnitt (alle Whg.)</td><td class="num">260.000 Ft</td><td class="num">~660 €</td></tr>
-            <tr><td>Günstigster Bezirk (XXIII.)</td><td class="num">167.000 Ft Median</td><td class="num">~420 €</td></tr>
-            <tr><td>Zentral &amp; möbliert (teures Ende)</td><td class="num">–</td><td class="num">650 € + 80 € NK</td></tr>
+            <tr><td><b>Garzon/Kleinwohnung ≤ 40 m², Median</b></td><td class="num">200.000 Ft</td><td class="num"><b>~550 €</b></td></tr>
+            <tr><td>Budapest gesamt, Median (ingatlan.com)</td><td class="num">260.000 Ft</td><td class="num">~714 €</td></tr>
+            <tr><td>Budapest gesamt, Median (alberlet.hu)</td><td class="num">250.000 Ft</td><td class="num">~687 €</td></tr>
+            <tr><td>WG-Zimmer, Median</td><td class="num">110.000 Ft</td><td class="num">~302 €</td></tr>
+            <tr><td>Teuerste Bezirke (II., V.)</td><td class="num">350.000 Ft</td><td class="num">~962 €</td></tr>
+            <tr><td>Billigster Bezirk (XIX. Kispest)</td><td class="num">210.000 Ft</td><td class="num">~577 €</td></tr>
+            <tr><td>Garzon im XIX. (billigster Garzon-Bezirk)</td><td class="num">~147.000 Ft</td><td class="num">~404 €</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="note"><b>Merksatz:</b> Deutsche Portale zeigen das obere Drittel des Marktes. Der ungarische Markt (ingatlan.com) ist 150–250 €/Monat günstiger. Und: Die Nachfrage ist aktuell schwächer, Preise stagnieren → <b>Verhandlungsspielraum!</b></div>
-    </div>
-
-    <div class="card">
-      <h3>📍 Welche Bezirke? <span class="sub">(McDaniel liegt im VII. Bezirk)</span></h3>
-      <ul class="rank">
-        <li><span class="medal">🥇</span><div><b>XIV. Zugló</b> – Preis-Leistungs-Sieger: grün (Városliget/Stadtwäldchen direkt daneben = Hundeparadies 🌳), günstig, ~15–20 Min. zum College.</div></li>
-        <li><span class="medal">🥈</span><div><b>VIII. (äußerer Teil) / IX. Ferencváros</b> – nah dran, im VIII. Bezirk ab ca. 170.000 Ft (~430 €).</div></li>
-        <li><span class="medal">🥉</span><div><b>X., XIX., XX. Bezirk</b> – am günstigsten, dafür 25–35 Min. Fahrt.</div></li>
-        <li><span class="medal">❌</span><div><b>V., VI., VII. Innenstadt</b> – Touristenpreise, mit Hunden eh unpraktisch.</div></li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>🔎 Wo suchen – in dieser Reihenfolge</h3>
-      <ol>
-        <li><b>ingatlan.com</b> – DIE ungarische Plattform. Filter: <code class="kw">kisállatbarát</code> (haustierfreundlich) + max. 220.000 Ft + Bezirke VIII, IX, X, XIV.</li>
-        <li><b>Rentola</b> – über 100 Wohnungen mit „pets allowed" in Budapest.</li>
-        <li><b>Longtermlettings / HousingAnywhere</b> – Filter „pets", teurer aber englischsprachig &amp; sicher.</li>
-        <li><b>Facebook-Gruppen:</b> „Kiadó lakás Budapest", „Budapest Flats for Rent".</li>
-      </ol>
-    </div>
-
-    <div class="card">
-      <h3>🐕 So überzeugst du den Vermieter (bei ZWEI Hunden wichtig!)</h3>
       <ul>
-        <li>Ein kurzes <b>„Hunde-Portfolio"</b> erstellen: Fotos, Rasse, Charakter + eine Referenz vom bisherigen Vermieter, dass die Hunde brav sind.</li>
-        <li>Zusätzliche <b>Haustier-Kaution</b> anbieten und ggf. ein Kennenlern-Treffen arrangieren.</li>
-        <li>Alle Hunde-Vereinbarungen <b>schriftlich in den Mietvertrag</b> aufnehmen.</li>
+        <li>Garzon- und Zimmer-Mediane sind <b>gegenüber Vorjahr unverändert</b> – der Studentinnen-Markt ist stabil.</li>
+        <li>Kein Bezirk liegt mehr unter 200.000 Ft Durchschnitt – die Schere zwischen billig und teuer schließt sich.</li>
+        <li>Vermieter-Renditen sind auf 3,5–4 % gefallen → wenig neuer Nachschub, Angebot bleibt knapp.</li>
       </ul>
-      <div class="note warnbox"><b>⚠️ Mietbetrug</b> zielt oft auf internationale Studierende. Nie Geld an unbekannte Vermieter überweisen, bevor du die Wohnung (oder eine verifizierte Plattform) gesehen hast. Kaution: meist 2 Monatsmieten + ggf. Hunde-Kaution → <b>~1.200–1.500 € Startkapital</b> einplanen.</div>
-      <div class="note tip"><b>🎯 Insider:</b> Das McDaniel College hilft selbst bei der Wohnungssuche, Krankenversicherung &amp; offiziellen Angelegenheiten. Dort direkt anfragen: <a href="mailto:premed@mcdaniel.hu">premed@mcdaniel.hu</a></div>
+      <div class="note"><b>Merksatz:</b> Deutsche/internationale Portale zeigen das obere Drittel des Marktes (HousingAnywhere-Schnitt: ~900 €!). Der ungarische Markt (ingatlan.com, alberlet.hu) ist 150–250 €/Monat günstiger.</div>
+    </div>
+
+    <div class="card">
+      <h3>📍 Bezirks-Ranking für dich <span class="sub">(2 Hunde + täglicher Weg in den VII.)</span></h3>
+      <div class="tbl-scroll">
+        <table>
+          <thead><tr><th>Bezirk</th><th>1–2-Zi. Spanne</th><th>Hunde 🐕</th><th>Weg zum College</th></tr></thead>
+          <tbody>
+            <tr><td>🥇 <b>XIV. Zugló</b></td><td class="num">160–260k Ft<br>440–714 €</td><td>Városligeti Kutyás Élménypark: 5.000 m², 3 Zonen, Agility, Hunde-Planschbecken</td><td>M2 ab Örs vezér tere → Blaha Lujza tér in 8:40 Min.</td></tr>
+            <tr><td>🥈 <b>XIX. Kispest</b></td><td class="num">Median 210k<br>~577 € (Garzons ab ~404 €)</td><td>Hundewiese Vak Bottyán utca</td><td>M3 + 1 Station M2, Tür-zu-Tür 35–45 Min.</td></tr>
+            <tr><td>🥉 <b>VIII./IX. (äußere Teile)</b></td><td class="num">160–280k Ft<br>440–769 €</td><td>Liliom utca (IX., beim Corvin): Schleusentor, Geräte</td><td>Innerer VIII.: <b>fußläufig!</b> Sonst M3/M4</td></tr>
+            <tr><td><b>XIII. Újlipótváros</b></td><td class="num">180–300k Ft<br>495–824 €</td><td>Szent-István-Park: längster Hundeauslauf der Stadt + Margitsziget nebenan</td><td>M3 (3 Stationen bis Deák) + Tram 4/6</td></tr>
+            <tr><td><b>X. Kőbánya</b></td><td class="num">günstig (zw. XIX. u. Mitte)</td><td>Óhegy Park: weitläufig, grün, Trinkbrunnen</td><td>M3-Südende + Tram, ~35–45 Min.</td></tr>
+            <tr><td><b>XI. Újbuda</b></td><td class="num">180–320k Ft<br>495–879 €</td><td>Bikás Park: getrennte Zonen für kleine/große Hunde</td><td>M4 → Deák, dann kurz</td></tr>
+            <tr><td>⚠️ <b>XX. Pesterzsébet</b></td><td class="num">220k Ft / ~604 €</td><td>ok</td><td><b>Keine Metro</b> – schwächste Pendel-Wahl</td></tr>
+            <tr><td>❌ <b>V./VI./VII. innen</b></td><td class="num">VII.: 180–320k</td><td>nur kleine Kies-Ausläufe (Klauzál/Almássy tér)</td><td>Partylärm im VII.; mit 2 Hunden nur Außenränder Richtung Városliget</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note tip"><b>Kurzfazit:</b> <b>Zugló (XIV.)</b> und <b>Kispest (XIX.)</b> = beste Kombination aus Miete, echter Hunde-Infrastruktur und Direkt-Metro. <b>XIII.</b> ist die grüne Alternative knapp darüber, <b>inneres VIII./IX.</b> die Zu-Fuß-Option.</div>
+    </div>
+
+    <div class="card">
+      <h3>💡 Nebenkosten-Realität (rezsi + közös költség)</h3>
+      <ul>
+        <li><b>rezsi</b> = Verbrauch (Strom, Gas, Wasser, Müll, Internet) – ist in ungarischen Mieten <b>fast nie enthalten</b>.</li>
+        <li><b>közös költség</b> = Hausgeld (Treppenhaus, Lift, Instandhaltung; manchmal Wasser/Müll) – <b>variiert stark je Haus</b>, immer separat erfragen, ob es in der Miete steckt.</li>
+        <li><b>Amtlich gedeckelte Tarife</b> (rezsicsökkentés): Strom 36,9 Ft/kWh bis 210 kWh/Monat, Gas 102 Ft/m³ bis 144 m³/Monat – ein Single-Haushalt in 30–40 m² bleibt praktisch immer im günstigen Band. <b>Darüber wird's ein Vielfaches!</b></li>
+        <li><b>Realistische Planung für 30–40 m²: ~30.000–50.000 Ft (82–137 €)/Monat</b> zusätzlich zur Kaltmiete, im Winter mehr (Heizsaison Okt.–April). Internet: ~7.700 Ft (~21 €).</li>
+        <li>Bezahlt wird oft gebündelt über das Portal <b>Díjnet</b> oder per Lastschrift.</li>
+      </ul>
+      <div class="note warnbox"><b>⚠️ Heizart = größter Kostenfaktor:</b> Immer fragen, wie geheizt wird (<i>cirkó</i> = Gastherme, <i>gázkonvektor</i>, <i>távfűtés</i> = Fernwärme, <i>házközponti</i> = Hauszentralheizung) und <b>die Winterabrechnungen des Vorbewohners zeigen lassen</b>. Sommer-Besichtigungen verschleiern teure Heizungen – ungedämmter Altbau mit Gaskonvektor ist die teuerste Kategorie. Auf alberlet.hu ist die Heizart filterbar.</div>
+    </div>
+  </section>
+
+  <!-- PORTALE -->
+  <section id="portale">
+    <h2>🔎 Portale &amp; Suchtaktik</h2>
+    <p class="sub">Wo du suchst, entscheidet über den Preis – und über die Gebühren, die du (nicht) zahlst.</p>
+
+    <div class="card">
+      <h3>Die richtige Reihenfolge</h3>
+      <ul class="rank">
+        <li><span class="medal">1️⃣</span><div><b>ingatlan.com</b> – das größte Portal, Suche kostenlos. Haustier-Filter <code class="kw">kisállat hozható</code>: <a href="https://ingatlan.com/szukites/kiado+lakas+kisallat-hozhato+budapest" target="_blank" rel="noopener">direkt zur gefilterten Budapest-Suche</a>. E-Mail-Alert „hirdetésfigyelő" aktivieren (meldet auch Preissenkungen). <b>Achtung:</b> blockt VPN-Zugriffe – vom normalen Browser/Handy nutzen. Support auch auf Englisch: segitunk@ingatlan.com</div></li>
+        <li><span class="medal">2️⃣</span><div><b>alberlet.hu</b> – reines Mietportal, <b>englische Version: en.alberlet.hu</b>. Haustier-Filter „Kisállat jöhet": <a href="https://www.alberlet.hu/kiado_alberlet/ingatlan-tipus:lakas/haziallat-engedelyezve:igen/keres:advanced/limit:24" target="_blank" rel="noopener">gefilterte Suche</a> (~200+ Angebote, ≈ jede 7.–8. Wohnung). Extra-Filter: Heizart, Lift, möbliert („berendezett"), „Diákoknak is" (auch für Studierende). Alert: „Albérletfigyelő".</div></li>
+        <li><span class="medal">3️⃣</span><div><b>Facebook-Gruppen</b> – Angebote direkt vom Vermieter: „Budapest flats and apartments for rent", „Flats FOR RENT • Budapest apartments", „Rent a flat / room in Budapest" u. a.; ungarisch mit Suche <code class="kw">kiadó lakás Budapest</code>. <b>Null Prüfung → Scam-Regeln strikt anwenden!</b></div></li>
+        <li><span class="medal">4️⃣</span><div><b>Makler-Inserate ruhig anschreiben:</b> In Ungarn zahlt der <b>Vermieter</b> die Provision (üblich 1 Monatsmiete) – <b>für Mieter ist der Makler kostenlos</b>. Expat-Makler sprechen Englisch, übersetzen Verträge und kennen hundefreundliche Vermieter.</div></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>⚠️ Internationale Plattformen: Gebühren kennen!</h3>
+      <div class="tbl-scroll">
+        <table>
+          <thead><tr><th>Plattform</th><th>Kosten für dich</th><th>Wofür geeignet</th></tr></thead>
+          <tbody>
+            <tr><td><b>Rentola</b></td><td class="num">Kontakt nur mit <b>Abo</b> 💸</td><td>Nur als kostenloser Alert (SearchAgent). Abo-Falle: Probeabo verlängert sich automatisch, keine Erstattung. Anzeigen stammen eh von anderen Portalen → dort direkt kontaktieren.</td></tr>
+            <tr><td><b>HousingAnywhere</b></td><td class="num">einmalig <b>25–40 %</b> der 1. Monatsmiete</td><td>Sichere Fernbuchung: Geld geht erst 2 Tage nach Einzug an den Vermieter. Aber oberes Preissegment (Ø ~900 €).</td></tr>
+            <tr><td><b>Spotahome</b></td><td class="num">Booking Fee (variabel)</td><td>Geprüfte Inserate – aber nur <b>36 von ~470</b> Budapest-Objekten erlauben Haustiere. Mit 2 Hunden kaum Auswahl.</td></tr>
+            <tr><td><b>Flatio</b></td><td class="num">1× Servicegebühr</td><td><b>Beste Landing-Lösung:</b> 769 Budapest-Angebote, Endpreise <b>inkl. Nebenkosten + Internet</b>, kautionsfrei unter 180 Tagen. Ideal für die ersten 1–3 Monate, um vor Ort in Ruhe zu suchen.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>⚡ Tempo-Taktik</h3>
+      <ul>
+        <li><b>Alerts auf beiden ungarischen Portalen aktivieren</b> und mehrmals täglich checken – gute Objekte sind binnen Stunden bis Tagen weg.</li>
+        <li><b>Anrufen schlägt E-Mail:</b> Allein in der ersten Julihälfte gab es 75.000 <i>telefonische</i> Anfragen auf ingatlan.com. Auf Englisch anrufen ist okay – oder eine ungarischsprachige Person bitten.</li>
+        <li><b>Videobesichtigung ist etabliert</b> („megtekintés videóhívásban") – im Anschreiben einfach anbieten. Vor Vertragsschluss trotzdem möglichst persönlich ansehen.</li>
+        <li>4–6 Wochen Vorlauf einplanen; mit 2 Hunden eher mehr, weil nur ein Teil der Angebote infrage kommt.</li>
+      </ul>
+    </div>
+
+    <div class="card" id="vorlagen">
+      <h3>✉️ Fertige Anfrage-Vorlagen (Hunde offensiv-positiv)</h3>
+      <p class="sub">Ehrlichkeit gewinnt: Beide Hunde von Anfang an nennen – die Anzahl ist ein typischer Begrenzungspunkt. Nie Tiere verheimlichen (endet fast sicher in Abmahnung/Kündigung).</p>
+      <details>
+        <summary>🇭🇺 Ungarische Vorlage (Copy &amp; Paste)</summary>
+        <div class="inner">
+          <blockquote>Tárgy: Érdeklődés – kiadó lakás [utca/hirdetésszám], hosszú távra
+
+Tisztelt Hirdető!
+
+[Name] vagyok, [Alter] éves német egyetemi hallgató Budapesten. Hosszú távra (minimum 1 évre) keresek bútorozott lakást, stabil havi jövedelemmel rendelkezem, a bérleti díjat banki átutalással, mindig pontosan fizetem.
+
+Fontos, hogy őszinte legyek: két jól nevelt, nyugodt kutyával költöznék. Mindkettő szobatiszta, oltott, chipezett, és felelősségbiztosításuk is van. Szívesen küldök róluk rövid bemutatkozó anyagot fotókkal és az előző főbérlőnk írásos ajánlásával, valamint felajánlok plusz egy havi kauciót a lakás védelmére. Ha szeretné, egy személyes találkozón meg is ismerheti őket.
+
+A lakás nagyon megtetszett. Mikor lenne alkalmas egy megtekintés – akár videóhívásban is? Sajnos magyarul még csak tanulok, angolul viszont jól beszélek.
+
+Köszönöm szépen a válaszát!
+Üdvözlettel,
+[Name] – [Telefon/WhatsApp]</blockquote>
+        </div>
+      </details>
+      <details>
+        <summary>🇬🇧 Englische Vorlage</summary>
+        <div class="inner">
+          <blockquote>Subject: Inquiry – flat for rent [street/listing no.], long term
+
+Dear Landlord,
+
+My name is [Name], I am a [age]-year-old German university student in Budapest, looking for a furnished flat long-term (minimum 1 year). I have a stable monthly income and always pay rent punctually by bank transfer.
+
+To be upfront: I would move in with my two well-behaved, calm dogs. Both are house-trained, vaccinated, microchipped and covered by liability insurance. I am happy to send you a short "dog CV" with photos and a written reference from our previous landlord, and I offer one extra month's deposit to protect your property. You are also welcome to meet them in person before deciding.
+
+I really like the flat. When would a viewing be possible – also via video call? Unfortunately I don't speak Hungarian yet, but English works well.
+
+Thank you very much!
+Kind regards,
+[Name] – [phone/WhatsApp]</blockquote>
+        </div>
+      </details>
+      <details>
+        <summary>🇩🇪 Deutsche Übersetzung (zum Verständnis)</summary>
+        <div class="inner">
+          <blockquote>Betreff: Anfrage – Mietwohnung [Straße/Anzeigen-Nr.], langfristig
+
+Sehr geehrte/r Vermieter/in,
+
+ich bin [Name], deutsche Studentin in Budapest, und suche langfristig (mindestens 1 Jahr) eine möblierte Wohnung. Ich habe ein stabiles monatliches Einkommen und zahle die Miete immer pünktlich per Überweisung.
+
+Ich bin ehrlich: Ich würde mit meinen zwei gut erzogenen, ruhigen Hunden einziehen. Beide sind stubenrein, geimpft, gechippt und haftpflichtversichert. Gern schicke ich ein kurzes „Hunde-Portfolio" mit Fotos und der Referenz unseres bisherigen Vermieters — und ich biete eine zusätzliche Monatsmiete Kaution an. Sie können die beiden vor der Entscheidung gern persönlich kennenlernen.
+
+Wann wäre eine Besichtigung möglich — auch per Videoanruf? Ungarisch lerne ich noch, Englisch spreche ich gut.
+
+Vielen Dank und freundliche Grüße
+[Name] – [Telefon/WhatsApp]</blockquote>
+        </div>
+      </details>
+      <div class="note tip"><b>🐶 Hunde-Portfolio („kutya-önéletrajz", 1 Seite PDF):</b> Foto, Rasse/Größe/Gewicht, Alter, stubenrein („szobatiszta"), Impfpass/Chip, Haftpflicht, Tagesroutine (wer ist wann zuhause), Referenzsatz des bisherigen Vermieters mit Kontakt. Allein dass es existiert, unterscheidet dich von 95 % der Anfragen.</div>
+    </div>
+
+    <div class="card">
+      <h3>🗣️ Mini-Glossar für die Portale</h3>
+      <div class="tbl-scroll">
+        <table>
+          <thead><tr><th>Ungarisch</th><th>Deutsch</th></tr></thead>
+          <tbody>
+            <tr><td>kiadó lakás / albérlet</td><td>Wohnung zu vermieten / Mietwohnung</td></tr>
+            <tr><td>garzon</td><td>Einzimmerwohnung/Studio (meist ≤ 40 m²)</td></tr>
+            <tr><td>bútorozott / bútorozatlan (berendezett / üres)</td><td>möbliert / unmöbliert</td></tr>
+            <tr><td>kisállatbarát · kisállat hozható · kisállat jöhet</td><td>haustierfreundlich / Haustier erlaubt</td></tr>
+            <tr><td>kaució</td><td>Kaution (üblich 2, mit Hunden oft 3 Monatsmieten)</td></tr>
+            <tr><td>rezsi / közös költség</td><td>Verbrauchskosten / Hausgeld</td></tr>
+            <tr><td>bérleti díj / bérleti szerződés</td><td>Miete / Mietvertrag</td></tr>
+            <tr><td>azonnal költözhető / hosszú távra</td><td>sofort beziehbar / langfristig</td></tr>
+            <tr><td>tulajdonos / főbérlő / bérlő</td><td>Eigentümer / Vermieter / Mieter(in)</td></tr>
+            <tr><td>kerület</td><td>Bezirk (23 Stück, römisch nummeriert)</td></tr>
+            <tr><td>tulajdoni lap</td><td>Grundbuchauszug (Eigentümer-Check!)</td></tr>
+            <tr><td>átadás-átvételi jegyzőkönyv</td><td>Übergabeprotokoll</td></tr>
+            <tr><td>közjegyzői okirat / kiköltözési nyilatkozat</td><td>notarielle (Auszugs-)Erklärung</td></tr>
+            <tr><td>lakcímkártya</td><td>Adresskarte</td></tr>
+            <tr><td>kutyafuttató</td><td>eingezäunte Hundewiese</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERTRAG -->
+  <section id="vertrag">
+    <h2>📄 Vertrag &amp; Recht</h2>
+    <p class="sub">Die Punkte, an denen in Ungarn wirklich Geld hängt. (Sorgfältig recherchiert, aber keine Rechtsberatung.)</p>
+
+    <div class="card">
+      <h3>Der Mietvertrag (bérleti szerződés)</h3>
+      <ul>
+        <li><b>Immer schriftlich</b> – mündlich/per E-Mail gilt als unwirksam. Best Practice: Privaturkunde <b>mit zwei Zeugen</b> unterschrieben (das erleichtert später auch die Adressanmeldung, s. u.!).</li>
+        <li><b>Rein gehört:</b> volle Daten beider Parteien, alle Bewohner namentlich, Objektbeschreibung, Laufzeit, Miete + Fälligkeit + Zahlungsweg, Nebenkosten-Regelung (wer zahlt was, Zähler umschreiben ja/nein), Kaution + Rückgabebedingungen, Reparatur-Zuständigkeiten, Kündigungsregeln, Zutrittsrecht nur nach Absprache – und die <b>Hunde-Klausel</b>.</li>
+        <li><b>Befristet vs. unbefristet:</b> Unbefristet = beidseitig kündbar (Erklärung bis zum 15. → wirksam zum Ende des Folgemonats). Befristet (üblich 1 Jahr) = <b>kein vorzeitiger Ausstieg</b>, außer der Vertrag erlaubt es → unbedingt eine <b>Break-Klausel hineinverhandeln</b>, sonst drohen bei Frühauszug Kaution + Restmieten.</li>
+        <li><b>Zweisprachig</b> (HU–EN üblich, HU–DE möglich) verlangen oder vor Unterschrift übersetzen lassen. Vor Behörden zählt die ungarische Fassung.</li>
+        <li>Kluge Zusatzklausel: Miete ist <b>Bruttobetrag</b> – alle Steuern/Abgaben trägt der Vermieter.</li>
+        <li>Gut zu wissen: Selbst nach Kündigung darf der Vermieter nicht einfach Schlösser tauschen oder Strom abstellen – Räumung geht nur per Gericht. Genau deshalb gibt es 👇</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Das Notar-Dokument (közjegyzői okirat) – kein Betrug!</h3>
+      <ul>
+        <li>Eine notariell beurkundete <b>Auszugserklärung</b> des Mieters ist in Budapest bei seriösen Vermietungen <b>Standard</b> – sie macht die Räumung ohne jahrelangen Prozess vollstreckbar. Wer das verlangt, ist eher seriös; <b>Warnsignal ist das Gegenteil</b> (kein Vertrag, keine Formalien).</li>
+        <li><b>Zwei Varianten:</b> (a) nur die Auszugserklärung wird beurkundet (Normalfall) – prüfen, ob auch Zahlungspflichten vollstreckbar gemacht werden; (b) der ganze Vertrag wird beurkundet (teurer) – schützt dann <b>auch dich</b>: die Kautionsrückzahlung wird gegen den Vermieter vollstreckbar.</li>
+        <li><b>Kosten:</b> grob einige zehntausend Forint (~50–150 €), abhängig von Umfang/Sprache. Wer zahlt, ist <b>Verhandlungssache</b> – Kostenteilung (z. B. 50/50) direkt in den Vertrag schreiben.</li>
+        <li>Der Notar muss das Dokument erklären – <b>nichts unterschreiben, was du nicht verstanden hast.</b></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Kaution (kaució) &amp; Übergabeprotokoll</h3>
+      <ul>
+        <li><b>Üblich: 2 Monatsmieten</b>, mit Haustieren oft 3. Ab <b>mehr als 3 Monatsmieten</b> kannst du laut ungarischem Zivilrecht die gerichtliche Herabsetzung verlangen – deutlich höhere Forderungen sind ein Warnsignal.</li>
+        <li>Rückzahlungsfrist + Pflicht zur <b>schriftlichen Einzelaufstellung von Abzügen</b> (Best Practice: 15 Tage) in den Vertrag schreiben. Abziehen darf der Vermieter nur <b>nachgewiesene</b> Schäden – natürliche Abnutzung trägst du nicht.</li>
+        <li><b>Übergabeprotokoll (átadás-átvételi jegyzőkönyv) ist deine Kautions-Versicherung:</b> alle Zähler mit <b>Seriennummer + Stand + Foto</b>, Anzahl aller Schlüssel, Inventarliste mit Zustand (Marke/Modell), jeden Kratzer notieren, Fotos/Video als Anlage, beide unterschreiben, je 1 Exemplar. <b>Beim Auszug dasselbe wiederholen.</b></li>
+        <li><b>Startkapital einplanen:</b> 2–3 Monatsmieten Kaution + 1. Miete ≈ <b>1.500–2.200 €</b> bei einer 180–200k-Ft-Wohnung.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🏷️ Adresskarte &amp; das Schwarzvermieter-Problem</h3>
+      <ul>
+        <li>Für die <b>lakcímkártya</b> (Adresskarte – nötig für Bank, TAJ/Gesundheit, Verträge) braucht die Anmeldung die <b>Zustimmung des Eigentümers</b> („szállásadó" unterschreibt) – <b>ODER</b>: Die Unterschrift ist <b>entbehrlich, wenn der Mietvertrag mit zwei Zeugen bezeugt oder notariell beglaubigt ist</b>. Kennt der Sachbearbeiter die Regel nicht: auf die Verfahrensbeschreibung auf magyarorszag.hu („Szállásadói hozzájárulás") verweisen.</li>
+        <li>Seit Feb. 2025 wird die physische Karte nicht mehr automatisch ausgestellt – <b>aktiv beantragen</b> (Gebühr 2026: 5.700 Ft ≈ 16 €). Hauptwohnsitz binnen 3 Werktagen nach Umzug melden (Kormányablak).</li>
+        <li><b>Vor Unterschrift fragen:</b> „Ich brauche die lakcímkártya – unterschreiben Sie die Anmeldung, oder machen wir den Vertrag mit zwei Zeugen?" <b>Wer ausweicht, vermietet meist schwarz</b> (Angst vor der Steuerbehörde NAV) – Finger weg: ohne Vertrag keine Anmeldung, kein Kautionsnachweis, keine Rechte.</li>
+        <li>Deshalb auch: <b>„Bar und ohne Vertrag" immer ablehnen.</b> Zahlung per Überweisung mit Verwendungszweck; bei bar immer Quittung.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🐕 Die saubere Hunde-Klausel</h3>
+      <ul>
+        <li><b>Rechtslage:</b> Es gilt Vertragsfreiheit – der Vermieter darf Haustiere verbieten. Die Hausordnung des Hauses darf Tierhaltung nicht generell verbieten, wohl aber Verhaltensregeln aufstellen. <b>Mündliche Erlaubnis genügt nicht</b> – nur die schriftliche Klausel schützt.</li>
+        <li><b>In die Klausel gehört:</b> beide Hunde konkret benennen (Rasse, Größe, Chipnummer), Haftung für Tierschäden, erhöhte Kaution (üblich +1 Monatsmiete) <i>oder</i> Zuschlag (Merksatz: <b>Kaution kommt zurück, Zuschlag nicht</b> → lieber Kaution), ggf. professionelle Endreinigung gegen Rechnung, Regeln für Gemeinschaftsflächen.</li>
+        <li><b>Vorher prüfen:</b> Hausordnung (házirend) des Gebäudes zu Tieren – einzelne Häuser haben eigene Regeln, auch wenn der Vermieter zustimmt.</li>
+        <li>Marktüblich als Zusatz-Sicherheit: <b>200–500 € Extra-Haustierkaution</b>. Mit Portfolio + Referenz + Extra-Kaution wird aus einem „Nein" oft ein „Ja unter Bedingungen".</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SICHERHEIT -->
+  <section id="betrug">
+    <h2>🚨 Betrug erkennen &amp; sicher besichtigen</h2>
+
+    <div class="card">
+      <h3>Die häufigsten Maschen 2025/26 (zielen auf Studierende!)</h3>
+      <ul>
+        <li><b>Zu-schön-um-wahr-Preis:</b> deutlich unter den Medianen (Garzon ~550 €, Zimmer ~300 €) = fast sicher Trick.</li>
+        <li><b>Kaution vor Besichtigung:</b> „Vermieter im Ausland" drängt auf Überweisung, schickt „Vertrag" per Mail – nach Zahlung unerreichbar. <b>Klassiker Nr. 1.</b></li>
+        <li><b>Keine Besichtigung, kein Videocall</b> möglich → sofort raus.</li>
+        <li><b>Druck &amp; Drohkulisse:</b> „Viele Interessenten warten!" + Aggressivität bei Rückfragen.</li>
+        <li><b>Foglaló-Trick:</b> Fake-„Makler" kassiert nach der Besichtigung von mehreren Interessenten gleichzeitig eine „Reservierungsgebühr" und verschwindet. Ohne Vertrag nie Geld geben.</li>
+        <li><b>Falscher Schlüssel:</b> Kaution gezahlt, Schlüssel passt am Einzugstag nicht – und vor der Tür stehen weitere Geschädigte.</li>
+        <li><b>Nicht-Eigentümer vermietet</b> (Wohnung gehört Gemeinde/Dritten).</li>
+        <li><b>Zwei-Verträge-Trick:</b> Mietvertrag + zusätzlicher „Beherbergungsvertrag" – erleichtert den Rauswurf. Nur einen echten <i>lakásbérleti szerződés</i> unterschreiben.</li>
+      </ul>
+      <div class="note badbox"><b>Red Flags auf einen Blick:</b> Preis weit unter Markt · keine Besichtigung · Zahlung vor Vertrag · Zeitdruck · WhatsApp-only · kein Eigentumsnachweis · keine Quittung · Vermieter zeigt keinen Ausweis · Wohnung „wird noch renoviert".</div>
+    </div>
+
+    <div class="card">
+      <h3>🔐 Eigentümer verifizieren (tulajdoni lap)</h3>
+      <ul>
+        <li>Der Grundbuchauszug zeigt Eigentümer + Lasten. <b>Name im Auszug muss = Name im Mietvertrag sein</b> (+ Ausweis abgleichen!). Bei mehreren Eigentümern müssen <b>alle</b> zustimmen.</li>
+        <li><b>Wichtig seit Sept. 2025:</b> Der Abruf läuft über das neue E-ING-System und ist <b>nur noch für Eigentümer/Berechtigte</b> möglich. Praktische Konsequenz: <b>Lass dir vom Vermieter einen aktuellen tulajdoni lap vorlegen</b> (e-Kopie kostet ihn 4.800 Ft ≈ 13 €) – seriöse Vermieter tun das ohne Zögern. Alternativ zieht ein beauftragter Anwalt den Auszug.</li>
+        <li>Sichere Zahlung: <b>nie vor unterschriebenem Vertrag</b>, Banküberweisung bevorzugen (aus DE z. B. via Wise, in HUF), bei bar immer Quittung.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🔍 Besichtigungs-Checkliste (Altbau &amp; Plattenbau)</h3>
+      <ul>
+        <li><b>Heizart erfragen + Winterabrechnungen zeigen lassen</b> (cirkó/gázkonvektor/távfűtés?) – der größte versteckte Kostenposten.</li>
+        <li><b>Zählerstände fotografieren</b> (Gas/Strom/Wasser), Inventar + Zustand mit Fotos festhalten.</li>
+        <li><b>Prepaid-Zähler?</b> (feltöltős mérő) – schalten bei leerem Guthaben einfach ab, vorher fragen.</li>
+        <li>Wasserdruck + Warmwasser testen, alle Geräte einschalten, <b>Internet per Speedtest</b> prüfen.</li>
+        <li>Fenster, Schlösser, Türen checken – <b>alle Schlüssel</b> aushändigen lassen.</li>
+        <li>Handyempfang in allen Räumen; Lärm zur Abendzeit einschätzen (besonders innerer VII.!).</li>
+        <li><b>Ist das közös költség in der Miete enthalten?</b> Kann Zehntausende Ft ausmachen.</li>
+        <li><b>Mit Hunden:</b> Hausordnung (házirend) zu Tieren erfragen; <b>Aufzug vorhanden?</b> (2 Hunde + 4. Stock Altbau ohne Lift = Alltagsfaktor; Lift ist auf alberlet.hu filterbar).</li>
+        <li>Nur <b>fertige</b> Wohnungen mieten – „wird noch renoviert" ist eine bekannte Falle.</li>
+      </ul>
     </div>
   </section>
 
@@ -251,8 +523,8 @@
       <label>Miete (kalt) <span class="val" id="v-rent">480 €</span></label>
       <input type="range" id="rent" min="350" max="850" step="10" value="480">
 
-      <label>Nebenkosten <span class="val" id="v-util">80 €</span></label>
-      <input type="range" id="util" min="30" max="180" step="10" value="80">
+      <label>Nebenkosten (rezsi + közös költség) <span class="val" id="v-util">110 €</span></label>
+      <input type="range" id="util" min="30" max="250" step="10" value="110">
 
       <label>Leben (Essen, Öffis, Hunde …) <span class="val" id="v-life">400 €</span></label>
       <input type="range" id="life" min="200" max="700" step="10" value="400">
@@ -261,12 +533,12 @@
       <input type="range" id="income" min="300" max="1400" step="10" value="500">
 
       <div class="result" id="result">
-        <div class="big" id="r-total">960 €</div>
+        <div class="big" id="r-total">990 €</div>
         <div class="lbl">Gesamtkosten pro Monat</div>
         <div class="status" id="r-status">–</div>
         <div class="gap-row"><span>Lücke / Puffer</span><span id="r-gap">–</span></div>
       </div>
-      <div class="note" style="margin-top:14px"><b>Tipp:</b> Zeigt die Ampel Rot, ist die Lücke der Betrag, den ein Remote- oder Teilzeitjob decken müsste. Ein deutscher Remote-Minijob bringt realistisch ~600 €/Monat.</div>
+      <div class="note" style="margin-top:14px"><b>Richtwerte (Juli 2026):</b> Garzon-Median 550 € kalt (Zugló/Kispest ab ~440 €), Nebenkosten 30–40 m² realistisch 82–137 €/Monat (wintersensitiv). Zeigt die Ampel Rot, ist die Lücke der Betrag, den ein Job decken müsste – ein deutscher Remote-Minijob bringt ~600 €/Monat.</div>
     </div>
   </section>
 
@@ -288,7 +560,7 @@
     <div class="card">
       <h3><span class="pill ok">Geht JETZT</span></h3>
       <ul>
-        <li><b>Günstiger wohnen</b> (siehe oben) → spart 170–240 €/Monat.</li>
+        <li><b>Günstiger wohnen</b> (siehe oben) → spart 150–250 €/Monat gegenüber Expat-Portalen.</li>
         <li><b>Remote-Minijob für einen deutschen Arbeitgeber</b> behalten – deutsches Lohnniveau, ungarische Kosten. Vorher Sozialversicherung klären (Stichwort <b>A1-Bescheinigung</b>).</li>
         <li><b>Lokaler Teilzeitjob:</b> EU-Bürger dürfen in Ungarn unbeschränkt arbeiten. Studentenfreundliche Jobs in Gastro, Englisch-Nachhilfe, IT, Callcentern.</li>
       </ul>
@@ -309,22 +581,72 @@
 
   <!-- HUNDE -->
   <section id="hunde">
-    <h2>🐕 Mit 2 Hunden nach Budapest</h2>
+    <h2>🐕 Mit 2 Hunden in Budapest</h2>
+
     <div class="card">
       <h3>Einreise (EU) – die Pflicht-Liste</h3>
       <ul>
         <li><b>Mikrochip</b> (ISO-Norm) – muss vor der Tollwutimpfung gesetzt sein.</li>
         <li><b>EU-Heimtierausweis</b> vom Tierarzt.</li>
-        <li><b>Gültige Tollwutimpfung</b> – muss <b>mindestens 21 Tage vor der Einreise</b> erfolgt sein (bei Erstimpfung). ⏰ Rechtzeitig planen!</li>
+        <li><b>Gültige Tollwutimpfung</b> – mindestens <b>21 Tage vor der Einreise</b> (bei Erstimpfung). ⏰ Rechtzeitig planen!</li>
       </ul>
-      <div class="note tip"><b>Gute Nachrichten:</b> Keine Quarantäne bei EU-Einreise, <b>keine Rasselisten</b> in Ungarn, und <b>keine Hundesteuer</b> wie in Deutschland.</div>
+      <div class="note tip"><b>Gute Nachrichten:</b> Keine Quarantäne bei EU-Einreise, <b>keine Rasselisten</b> in Ungarn, <b>keine Hundesteuer</b> wie in Deutschland.</div>
     </div>
+
     <div class="card">
-      <h3>Vor Ort</h3>
+      <h3>🚇 Öffis (BKK) – die offiziellen Regeln</h3>
       <ul>
-        <li><b>Öffis:</b> Hunde erlaubt – mit <b>Maulkorb und Leine</b>.</li>
-        <li><b>Beste Hunde-Gegend:</b> Zugló (XIV.) am Városliget/Stadtwäldchen – viel Grün zum Auslaufen. 🌳</li>
-        <li>Chip &amp; Impfstatus nach dem Umzug beim örtlichen Tierarzt aktuell halten.</li>
+        <li>Kleine Hunde in geschlossener <b>Box/Tasche</b>: gelten als Handgepäck – kein Ticket, kein Maulkorb.</li>
+        <li>Alle anderen Hunde: <b>nur mit Leine UND Maulkorb</b> (auch auf dem Arm; ein Halti zählt nicht).</li>
+        <li><b>Impfpass immer mitführen</b> – Kontrolleure dürfen ihn verlangen.</li>
+        <li><b>Ticket:</b> Mit gültiger Zeitkarte nimmst du <b>einen</b> Hund gratis mit; sonst braucht der Hund ein eigenes Ticket.</li>
+        <li><b>⚠️ Wichtig für euch: Pro Fahrgast nur EIN Hund!</b> Für beide Hunde brauchst du eine zweite Person – oder du planst Wege zu Fuß/mit dem Rad. Das spricht zusätzlich für eine Wohnung <b>nahe College oder Park</b> (Zugló!).</li>
+        <li>Rolltreppe: Hund tragen (Verletzungsgefahr); Sitze sind tabu.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🌳 Hundewiesen (kutyafuttató) &amp; Freilauf</h3>
+      <div class="tbl-scroll">
+        <table>
+          <thead><tr><th>Bezirk</th><th>Ort</th><th>Besonderheit</th></tr></thead>
+          <tbody>
+            <tr><td>XIV. Zugló</td><td><b>Városligeti Kutyás Élménypark</b></td><td>5.000 m², 3 Zonen, Agility, 70-m²-Hundeplanschbecken – größtes Areal der Stadt</td></tr>
+            <tr><td>XIII.</td><td><b>Szent-István-Park</b></td><td>längster Auslauf der Stadt, hoher Zaun, alte Bäume</td></tr>
+            <tr><td>XI.</td><td><b>Bikás Park</b></td><td>riesig, getrennte Bereiche kleine/große Hunde, Wasser</td></tr>
+            <tr><td>V.</td><td>Olimpiai Park</td><td>Doppelschleuse, Spielgeräte, Kies, Schatten</td></tr>
+            <tr><td>VII.</td><td>Klauzál tér, Almássy tér</td><td>Kies-Ausläufe mitten im Viertel, Trinkbrunnen</td></tr>
+            <tr><td>IX.</td><td>Liliom utca (Corvin)</td><td>Schleusentor, Geräte – wenig Schatten</td></tr>
+            <tr><td>III. Óbuda</td><td>Őszike utca, Mészkő Park</td><td>einer der größten + Agility; hundefreundlichster Bezirk</td></tr>
+            <tr><td>X.</td><td>Óhegy Park</td><td>weitläufig, grün, Trinkbrunnen</td></tr>
+            <tr><td>XIX.</td><td>Vak Bottyán utca</td><td>gut ausgestattet (kein Wasseranschluss)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li><b>Freilauf-Ausflüge:</b> Óbudai-sziget (Hajógyári-Insel – Freilauf-Klassiker), <b>Római-part (Baden!)</b>, Normafa, Kiscelli-Wald.</li>
+        <li><b>Margitsziget:</b> Läufer- und Hundeparadies – aber Leinenpflicht wie überall außerhalb der Futtatós. In Budapest gilt generell <b>Leinenpflicht im öffentlichen Raum</b>; frei nur in ausgewiesenen Zonen.</li>
+        <li>Extras: 24-h-SB-Hundewaschanlagen (u. a. Bikás Park, Zugló), viele hundefreundliche Cafés.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🏥 Tierarzt, Registrierung &amp; Versicherung</h3>
+      <div class="tbl-scroll">
+        <table>
+          <thead><tr><th>Leistung</th><th>Budapest (normale Praxis)</th><th>Deutschland (GOT-üblich)</th></tr></thead>
+          <tbody>
+            <tr><td>Allgemeine Untersuchung</td><td class="num">10.000 Ft ≈ 27 €</td><td class="num">30–60 €</td></tr>
+            <tr><td>Kombi-Impfung + Tollwut</td><td class="num">17.500 Ft ≈ 48 €</td><td class="num">50–80 €</td></tr>
+            <tr><td>Chip inkl. Registrierung</td><td class="num">15.000 Ft ≈ 41 €</td><td class="num">30–50 €</td></tr>
+            <tr><td>Kastration Hündin</td><td class="num">ab 58.000 Ft ≈ 160 €</td><td class="num">250–600 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li>Routine ist <b>spürbar günstiger als in DE</b>; die 24-h-Klinik (Budapesti Állatkórház) liegt auf deutschem Niveau. In Expat-Bezirken sprechen viele Praxen Englisch.</li>
+        <li><b>📇 Pflicht nach dem Umzug:</b> Änderungen von Halter/Haltungsort müssen <b>binnen 8 Tagen</b> über einen ungarischen Tierarzt in der Chip-Datenbank <b>PetVetData</b> registriert werden (Chip-Registrierung ~4.500 Ft ≈ 12 €). Check per Chipnummer: petvetdata.hu.</li>
+        <li><b>Haftpflicht:</b> Die deutsche Hundehaftpflicht gilt meist <b>EU-weit unbegrenzt, solange der Hauptwohnsitz in DE bleibt</b> – vor Abreise Bedingungen prüfen (Stichwort <b>Mietsachschäden</b>-Deckung – häufigste Schadenart in Mietwohnungen!). Bei komplettem Umzug: ungarische <i>kutyatartói felelősségbiztosítás</i> als Zusatz zur Wohnpolice.</li>
       </ul>
     </div>
   </section>
@@ -335,10 +657,11 @@
     <div class="card">
       <p class="sub">Als EU-Bürgerin darfst du frei einreisen. Bei Aufenthalt über 90 Tage sind zwei Schritte fällig:</p>
       <ul class="rank">
-        <li><span class="medal">1️⃣</span><div><b>Bis Tag 93: Registrierungskarte</b> (Registrierungsbescheinigung / „registration card") bei der Einwanderungsbehörde beantragen. Nötig u. a.: Nachweis Studienplatz/Aufenthaltszweck &amp; Krankenversicherung.</div></li>
-        <li><span class="medal">2️⃣</span><div><b>Danach: Lakcímkártya</b> (Adress-/Wohnkarte) – wird nach dem Einzug mit dem Mietvertrag beantragt. Wichtig für fast alle Behördengänge.</div></li>
+        <li><span class="medal">1️⃣</span><div><b>Bis Tag 93: Registrierungsbescheinigung</b> (regisztrációs igazolás, Gebühr 1.000 Ft) bei der Einwanderungsbehörde. Nötig u. a.: Nachweis Studienplatz &amp; Krankenversicherung.</div></li>
+        <li><span class="medal">2️⃣</span><div><b>Danach: Lakcímkártya</b> (Adresskarte) – daran gekoppelt, aber die physische Karte seit 2025 <b>aktiv beantragen</b> (5.700 Ft). Braucht die Vermieter-Zustimmung <b>oder</b> einen mit 2 Zeugen bezeugten Mietvertrag (siehe <a href="#vertrag">Vertrag &amp; Recht</a>).</div></li>
+        <li><span class="medal">3️⃣</span><div><b>Hunde binnen 8 Tagen</b> beim Tierarzt in PetVetData ummelden (siehe <a href="#hunde">Hunde</a>).</div></li>
       </ul>
-      <div class="note"><b>Tipp:</b> Krankenversicherung frühzeitig klären (EHIC reicht für Studium/Daueraufenthalt oft nicht) – am besten schon vor der Einreise.</div>
+      <div class="note"><b>Tipp:</b> Krankenversicherung frühzeitig klären (EHIC reicht für Daueraufenthalt oft nicht) – am besten schon vor der Einreise.</div>
     </div>
   </section>
 
@@ -353,7 +676,7 @@
         <div class="row"><span class="k">Kontakt</span><span class="v"><a href="mailto:premed@mcdaniel.hu">premed@mcdaniel.hu</a></span></div>
         <div class="row"><span class="k">Web</span><span class="v"><a href="https://mcdaniel.hu/home/pre-med-program/" target="_blank" rel="noopener">mcdaniel.hu</a></span></div>
       </div>
-      <div class="note tip">Das College bietet Unterstützung bei Wohnungssuche, Krankenversicherung und offiziellen Angelegenheiten – als erste Anlaufstelle nutzen, die kennen den Markt.</div>
+      <div class="note tip">Das College bietet Unterstützung bei Wohnungssuche, Krankenversicherung und offiziellen Angelegenheiten – als erste Anlaufstelle nutzen, die kennen den Markt (und ggf. hundefreundliche Vermieter).</div>
     </div>
   </section>
 
@@ -363,14 +686,17 @@
     <p class="sub">Häkchen werden automatisch auf deinem Gerät gespeichert. In 3 Phasen.</p>
 
     <div class="card">
-      <div class="phase-title"><span class="n">1</span> Vorbereiten (jetzt)</div>
+      <div class="phase-title"><span class="n">1</span> Vorbereiten (jetzt!)</div>
       <ul class="check" data-check>
-        <li><input type="checkbox" id="c1"><span class="txt">Wohnungsstrategie: auf <b>ingatlan.com</b> mit Filter <code class="kw">kisállatbarát</code> + max. 220.000 Ft in Bezirken VIII, IX, X, XIV suchen</span></li>
-        <li><input type="checkbox" id="c2"><span class="txt"><b>Hunde-Portfolio</b> basteln (1 Seite: Fotos, Rasse, Charakter, Referenz)</span></li>
-        <li><input type="checkbox" id="c3"><span class="txt"><b>~1.500 € Startkapital</b> für Kaution + Hunde-Kaution zurücklegen</span></li>
+        <li><input type="checkbox" id="c16"><span class="txt"><b>Suchagenten aktivieren:</b> hirdetésfigyelő (ingatlan.com) + Albérletfigyelő (alberlet.hu) mit Haustier-Filter – mehrmals täglich checken, sofort anrufen</span></li>
+        <li><input type="checkbox" id="c1"><span class="txt">Auf <b>ingatlan.com</b> (Filter <code class="kw">kisállat hozható</code>) + <b>en.alberlet.hu</b> (Filter „Kisállat jöhet") in Bezirken XIV, XIX, VIII, IX, XIII suchen – max. ~220.000 Ft</span></li>
+        <li><input type="checkbox" id="c2"><span class="txt"><b>Hunde-Portfolio</b> basteln (1 Seite PDF: Fotos, Rasse, stubenrein, Impfungen, Haftpflicht, Referenz)</span></li>
+        <li><input type="checkbox" id="c17"><span class="txt"><b>Anfrage-Vorlage</b> (HU + EN) mit eigenen Daten füllen und als Textbaustein speichern</span></li>
+        <li><input type="checkbox" id="c3"><span class="txt"><b>Startkapital reservieren:</b> 2–3 Monatsmieten Kaution + 1. Miete ≈ <b>1.500–2.200 €</b></span></li>
         <li><input type="checkbox" id="c4"><span class="txt"><b>McDaniel anschreiben</b> (premed@mcdaniel.hu) wegen Wohnungshilfe &amp; hundefreundlicher Vermieter</span></li>
         <li><input type="checkbox" id="c5"><span class="txt"><b>Formlose BAföG-Anfrage</b> ans Studentenwerk Chemnitz-Zwickau (Vorjahr klären + Studium vorbereiten)</span></li>
         <li><input type="checkbox" id="c6"><span class="txt"><b>Nebenjob checken:</b> Remote-DE-Job vor lokalem Job prüfen (A1-Bescheinigung nicht vergessen)</span></li>
+        <li><input type="checkbox" id="c20"><span class="txt"><b>Hundehaftpflicht prüfen:</b> EU-Auslandsgeltung + Mietsachschäden-Deckung beim Versicherer bestätigen lassen</span></li>
       </ul>
 
       <div class="phase-title"><span class="n">2</span> Hunde &amp; Einreise</div>
@@ -378,14 +704,19 @@
         <li><input type="checkbox" id="c7"><span class="txt"><b>Mikrochip</b> beider Hunde prüfen (ISO-Norm, vor Tollwutimpfung)</span></li>
         <li><input type="checkbox" id="c8"><span class="txt"><b>Tollwutimpfung</b> auffrischen – mind. 21 Tage vor Einreise!</span></li>
         <li><input type="checkbox" id="c9"><span class="txt"><b>EU-Heimtierausweis</b> für beide Hunde besorgen</span></li>
+        <li><input type="checkbox" id="c21"><span class="txt"><b>2 Maulkörbe</b> besorgen + antrainieren (Pflicht in den Öffis; Halti zählt nicht)</span></li>
         <li><input type="checkbox" id="c10"><span class="txt"><b>Krankenversicherung</b> für Ungarn klären (vor Einreise)</span></li>
       </ul>
 
-      <div class="phase-title"><span class="n">3</span> Vor Ort in Budapest</div>
+      <div class="phase-title"><span class="n">3</span> Besichtigung, Vertrag &amp; vor Ort</div>
       <ul class="check" data-check>
-        <li><input type="checkbox" id="c11"><span class="txt">Wohnung besichtigen (nie blind Geld überweisen!) &amp; <b>Mietvertrag</b> mit Hunde-Klausel unterschreiben</span></li>
-        <li><input type="checkbox" id="c12"><span class="txt"><b>Registrierungskarte</b> bis Tag 93 beantragen</span></li>
-        <li><input type="checkbox" id="c13"><span class="txt"><b>Lakcímkártya</b> (Adresskarte) mit Mietvertrag beantragen</span></li>
+        <li><input type="checkbox" id="c18"><span class="txt"><b>Eigentum prüfen:</b> aktuellen tulajdoni lap + Ausweis des Vermieters zeigen lassen (alle Eigentümer müssen zustimmen)</span></li>
+        <li><input type="checkbox" id="c22"><span class="txt"><b>Heizart + Winterabrechnungen</b> erfragen, közös költség klären, Besichtigungs-Checkliste durchgehen</span></li>
+        <li><input type="checkbox" id="c11"><span class="txt"><b>Vertrag:</b> schriftlich mit 2 Zeugen, Hunde-Klausel (beide Hunde!), Break-Klausel, Kautionsabrechnung 15 Tage – nie blind Geld überweisen!</span></li>
+        <li><input type="checkbox" id="c19"><span class="txt"><b>Übergabeprotokoll</b> mit Zählerständen (Foto!), Inventar, allen Schlüsseln – beide unterschreiben</span></li>
+        <li><input type="checkbox" id="c12"><span class="txt"><b>Registrierungsbescheinigung</b> bis Tag 93 beantragen</span></li>
+        <li><input type="checkbox" id="c13"><span class="txt"><b>Lakcímkártya</b> aktiv beantragen (mit Vermieter-Zustimmung oder bezeugtem Vertrag)</span></li>
+        <li><input type="checkbox" id="c23"><span class="txt"><b>Hunde binnen 8 Tagen</b> beim Tierarzt in <b>PetVetData</b> ummelden</span></li>
         <li><input type="checkbox" id="c14"><span class="txt">Örtlichen <b>Tierarzt</b> finden &amp; Impfstatus aktuell halten</span></li>
         <li><input type="checkbox" id="c15"><span class="txt"><b>BAföG-Antrag fürs Studium</b> stellen (6 Monate vor Studienbeginn)</span></li>
       </ul>
@@ -397,29 +728,94 @@
   <!-- QUELLEN -->
   <section id="quellen">
     <h2>🔗 Quellen</h2>
+    <p class="sub">Alle Links wurden am 22.07.2026 live abgerufen und inhaltlich geprüft – keine toten Links.</p>
     <div class="card">
+      <div class="src-group">📊 Markt, Preise &amp; Timing (2026)</div>
+      <div class="sources">
+        <a href="https://www.ksh.hu/s/kiserleti-statisztika/kiadvanyok/kshingatlancom-lakberindex-2026-junius/" target="_blank" rel="noopener">KSH–ingatlan.com Mietindex Juni 2026 (amtlich)</a>
+        <a href="https://index.hu/gazdasag/2026/07/21/alberlet-alberletpiac-ar-szoba-garzon-ponthatarok-felveteli/" target="_blank" rel="noopener">Index 21.07.2026: Garzon-/Zimmer-Mediane, Ponthúzás</a>
+        <a href="https://index.hu/gazdasag/2026/07/14/alberlet-alberletpiac-berleti-dij-dragulas-berlakas-berlakasprogram-kiado-lakas-berloi-piac-ingatlan-ingatlanpiac/" target="_blank" rel="noopener">Index 14.07.2026: Bezirksmediane, Angebot, Timing</a>
+        <a href="https://tudastar.ingatlan.com/hirek/ilyen-arakkal-varja-a-ponthatarhirdetest-az-alberletpiac/" target="_blank" rel="noopener">ingatlan.com Marktbericht 21.07.2026</a>
+        <a href="https://profitline.hu/alberlet-arak-2026-junius-488954" target="_blank" rel="noopener">ProfitLine 13.07.2026: Juni-Zahlen (Zweitbestätigung)</a>
+        <a href="https://www.portfolio.hu/ingatlan/20260611/megallt-az-alberletek-dragulasa-mutatjuk-az-atlagos-dijakat-varosonkent-es-keruletenkent-842638" target="_blank" rel="noopener">Portfolio 11.06.2026: Mai-Daten</a>
+        <a href="https://berkalkulator.com/blog/2026/budapest-alberlet-fizetes-2026" target="_blank" rel="noopener">Bezirks-Mediantabelle Jan. 2026</a>
+        <a href="https://www.alberlettippek.hu/blog/budapest-legjobb-keruletei-alberloknek-2026-ban-undefined-osszehasonlitas-keruletenkent" target="_blank" rel="noopener">alberlet.hu-Blog: Bezirks-Preisspannen 2026</a>
+        <a href="https://www.eudiakok.hu/blog/2026-os-felveteli-ponthatarok-idopont-eredmeny-pont-ott-parti-es-minden-fontos-info/" target="_blank" rel="noopener">Ponthúzás-Termin 23.07.2026</a>
+        <a href="https://www.mnb.hu/arfolyamok" target="_blank" rel="noopener">MNB amtlicher Devisenkurs</a>
+        <a href="https://www.numbeo.com/cost-of-living/in/Budapest" target="_blank" rel="noopener">Numbeo Budapest: Nebenkosten-Benchmark</a>
+        <a href="https://www.money.hu/rezsi-kalkulator" target="_blank" rel="noopener">Rezsi-Kalkulator: amtliche Tarife 2026</a>
+      </div>
+
+      <div class="src-group">🔎 Portale &amp; Suche</div>
+      <div class="sources">
+        <a href="https://ingatlan.com/szukites/kiado+lakas+kisallat-hozhato+budapest" target="_blank" rel="noopener">ingatlan.com: haustierfreundliche Mietwohnungen Budapest</a>
+        <a href="https://www.alberlet.hu/kiado_alberlet/ingatlan-tipus:lakas/haziallat-engedelyezve:igen/keres:advanced/limit:24" target="_blank" rel="noopener">alberlet.hu: Suche mit Haustier-Filter</a>
+        <a href="https://tudastar.ingatlan.com/hirek/allatbarat-alberlet-mutatunk-top-5-ingatlant-budapesten/" target="_blank" rel="noopener">ingatlan.com: Tipps für Tierhalter + Filter</a>
+        <a href="https://housinganywhere.com/s/Budapest--Hungary/apartment-for-rent" target="_blank" rel="noopener">HousingAnywhere Budapest</a>
+        <a href="https://answers.housinganywhere.com/en/articles/2501611-what-is-tenant-protection-and-when-do-i-pay-for-it" target="_blank" rel="noopener">HousingAnywhere: Tenant-Protection-Gebühr</a>
+        <a href="https://www.spotahome.com/budapest" target="_blank" rel="noopener">Spotahome Budapest</a>
+        <a href="https://www.flatio.com/" target="_blank" rel="noopener">Flatio (Landing-Lösung, NK inklusive)</a>
+        <a href="https://faq.rentola.com/hc/en-us/articles/36040438755346-What-features-are-free-on-Rentola" target="_blank" rel="noopener">Rentola: was kostenlos ist (Abo-Warnung)</a>
+        <a href="http://www.budapestestate.com/faq/" target="_blank" rel="noopener">Maklerprovision: zahlt der Vermieter</a>
+        <a href="https://mhomes.hu/en/blog/show/The-Complete-Guide-for-Expats-to-Renting-Property-in-Budapest-in-2025" target="_blank" rel="noopener">Expat-Mietguide Budapest 2025</a>
+        <a href="https://www.storys-budapest.com/post/the-operation-of-a-rental-faq-in-budapest-with-story-s" target="_blank" rel="noopener">Mieter-FAQ: Kaution, Pet Deposit, Wise</a>
+        <a href="https://bplx.org/blog/renting-an-apartment-in-budapest-how-to-guide-tips/" target="_blank" rel="noopener">Guide: Facebook-Gruppen &amp; Vokabeln</a>
+      </div>
+
+      <div class="src-group">📄 Recht, Vertrag &amp; Anmeldung</div>
+      <div class="sources">
+        <a href="https://wagnerlaw.hu/tenancy-law-in-hungary/" target="_blank" rel="noopener">Kanzlei Wagner &amp; Wagner: Mietrecht für Ausländer</a>
+        <a href="https://drnagyildiko.hu/en/blog/rental-law-regulations-2026/" target="_blank" rel="noopener">Kanzlei Dr. Nagy: Mietrecht Stand 2026</a>
+        <a href="https://drszijarto.hu/en/2025/06/24/how-to-rent-out-your-property-in-hungary-complete-legal-guide-for-foreign-owners-2025/" target="_blank" rel="noopener">Kanzlei Dr. Szijártó: Rechtsguide 2025</a>
+        <a href="https://katonareka.hu/en/2023/03/08/what-you-should-know-about-the-vacation-statement/" target="_blank" rel="noopener">Kanzlei Dr. Katona: Notar-Auszugserklärung</a>
+        <a href="https://www.madarassy-legal.com/en/rent-an-apartment-in-budapest-here-is-what-you-need-to-know-about-rental-agreements/" target="_blank" rel="noopener">Kanzlei Madarassy: Mietvertrag-Basics</a>
+        <a href="https://helpers.hu/residence-permit/all-about-the-hungarian-address-card/" target="_blank" rel="noopener">Helpers: Adresskarte + Zeugen-Alternative</a>
+        <a href="https://howtohungary.com/2026/02/26/address-card-in-hungary-2026/" target="_blank" rel="noopener">How to Hungary: Adresskarte 2026</a>
+        <a href="https://migaid.org/en/renting-an-apartment-in-hungary/" target="_blank" rel="noopener">Migration Aid: Miet-Praxisleitfaden</a>
+        <a href="https://dailynewshungary.com/renting-in-hungary-important-things/" target="_blank" rel="noopener">Daily News Hungary: Miet-Basics</a>
+        <a href="https://budapest-invest.com/en/blog/hungary-rental-income-tax-2026.html" target="_blank" rel="noopener">Vermietersteuer 2026 (Hintergrund)</a>
+        <a href="https://imigrant-hungary.com/en/blog/property-maintenance-cost-hungary/" target="_blank" rel="noopener">Nebenkosten-Größenordnungen + Díjnet</a>
+        <a href="https://banknavigator.hu/kisallat-alberletben-mit-mond-a-jog-ha-a-szerzodes-tiltja/" target="_blank" rel="noopener">Rechtsanalyse: Haustiere im Mietvertrag (10/2025)</a>
+        <a href="https://berletiszerzodesem.hu/alberlet-kisallat-berleti-szerzodes-kisallattal-2024/" target="_blank" rel="noopener">Haustierklausel-Muster</a>
+        <a href="https://berletiszerzodesem.hu/birtokbaadasi-jegyzokonyv/" target="_blank" rel="noopener">Übergabeprotokoll: Pflichtinhalte</a>
+        <a href="https://dh.hu/tudastar/alberlet-kereses-ezekre-figyelj-oda-hogy-biztosan-megfelelo-helyre-koltozz" target="_blank" rel="noopener">Duna House: közös költség klären</a>
+      </div>
+
+      <div class="src-group">🚨 Betrug &amp; Verifikation</div>
+      <div class="sources">
+        <a href="https://diaklakas.hu/en/blog/apartment-hunting-budapest-tips-red-flags/" target="_blank" rel="noopener">14 Red Flags für Studierende (03/2025)</a>
+        <a href="https://www.borsonline.hu/toptipp/2025/08/alberlet-csalok" target="_blank" rel="noopener">6 aktuelle Betrugsmaschen (08/2025)</a>
+        <a href="https://www.penzcentrum.hu/otthon/20251103/tulajdoni-lap-lekerese-ingyen-es-dij-elleneben-2025-ben-ez-az-igenyles-menete-lepesrol-lepesre-1187742" target="_blank" rel="noopener">tulajdoni lap 2025: E-ING, Gebühren, Zugriff</a>
+      </div>
+
+      <div class="src-group">🐕 Hunde: Öffis, Parks, Tierarzt, Pflichten</div>
+      <div class="sources">
+        <a href="https://bkk.hu/utazasi-informaciok/kozossegi-kozlekedes/utazas-kutyaval/" target="_blank" rel="noopener">BKK offiziell: Hunde in den Öffis</a>
+        <a href="https://athome-network.com/en/blog/at-home-news-8/paws-welcome-renting-with-pets-in-budapest-369" target="_blank" rel="noopener">Renting with Pets in Budapest (07/2025)</a>
+        <a href="https://dogx.hu/kutyatartas/gondozas/budapesti-kutyafuttatok/" target="_blank" rel="noopener">Hundewiesen nach Bezirken</a>
+        <a href="https://welovedogz.hu/elet/kutyas-helyek-budapesten/" target="_blank" rel="noopener">Beste Hundeorte + Leinenregeln</a>
+        <a href="https://welovebudapest.com/toplista/budapesti-kisokos-kutyatartoknak-hova-mehetunk-kedvenceinkkel" target="_blank" rel="noopener">Hundehalter-Kisokos Budapest</a>
+        <a href="https://erdvet.hu/kutyachip/" target="_blank" rel="noopener">Chip-Pflicht + 8-Tage-Frist PetVetData</a>
+        <a href="https://www.petvetdata.hu/help.html" target="_blank" rel="noopener">PetVetData offiziell</a>
+        <a href="https://budapestiallatkorhaz.hu/arak/" target="_blank" rel="noopener">Preisliste 24-h-Tierklinik</a>
+        <a href="https://ujpestvet.hu/araink/" target="_blank" rel="noopener">Preisliste normale Praxis</a>
+        <a href="https://pfoten-ratgeber.de/ratgeber/tierarztkosten/" target="_blank" rel="noopener">Deutsche GOT-Vergleichspreise</a>
+        <a href="https://www.vergleichen-und-sparen.de/hundeversicherung/hundehaftpflicht/auslandsschutz/" target="_blank" rel="noopener">Hundehaftpflicht im EU-Ausland</a>
+        <a href="https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_de.htm" target="_blank" rel="noopener">EU-Regeln: Reisen mit Haustieren</a>
+        <a href="https://www.tiermedizinportal.de/magazin/einreisebestimmungen-einreise-nach-ungarn-mit-hund" target="_blank" rel="noopener">Einreise nach Ungarn mit Hund</a>
+      </div>
+
+      <div class="src-group">🎓 College, BAföG &amp; Behörden</div>
       <div class="sources">
         <a href="https://mcdaniel.hu/home/pre-med-program/" target="_blank" rel="noopener">McDaniel College – Pre-Medical Track</a>
-        <a href="https://medicalstudyhungary.com/pre-medical" target="_blank" rel="noopener">Pre-Medical Track (medicalstudyhungary)</a>
-        <a href="https://ungarnstudium.hu/Vorbereitungsjahr" target="_blank" rel="noopener">Vorbereitungsjahr McDaniel (ungarnstudium.hu)</a>
+        <a href="https://ungarnstudium.hu/Vorbereitungsjahr" target="_blank" rel="noopener">Vorbereitungsjahr McDaniel (deutsch)</a>
         <a href="https://www.studieren-in-ungarn.de/357,1,bafoeg.html" target="_blank" rel="noopener">BAföG – Studieren in Ungarn</a>
-        <a href="https://www.bafoeg-rechner.de/auslandsbafoeg/ungarn.php" target="_blank" rel="noopener">Auslands-BAföG Ungarn (bafoeg-rechner.de)</a>
-        <a href="https://www.auslandsbafoeg.de/gesundheit-medizin-im-ausland-studieren/" target="_blank" rel="noopener">Medizin im Ausland – Auslands-BAföG</a>
-        <a href="https://www.medigate.eu/ueberblick/auslands-bafoeg-waehrend-des-medizinstudiums/" target="_blank" rel="noopener">Auslands-BAföG während des Medizinstudiums</a>
+        <a href="https://www.bafoeg-rechner.de/auslandsbafoeg/ungarn.php" target="_blank" rel="noopener">Auslands-BAföG Ungarn</a>
+        <a href="https://www.medigate.eu/ueberblick/auslands-bafoeg-waehrend-des-medizinstudiums/" target="_blank" rel="noopener">Auslands-BAföG im Medizinstudium</a>
         <a href="https://semmelweis.hu/deutsch/bewerbung/haeufig-gestellte-fragen-faq/" target="_blank" rel="noopener">Semmelweis – FAQ Deutschsprachiges Studium</a>
-        <a href="https://tozsdeforum.hu/extra/eletvitel/alberlet-paradoxon-2026-amikor-a-stagnalas-a-legjobb-hir/" target="_blank" rel="noopener">Albérlet-Paradoxon 2026 (Mietmarkt)</a>
-        <a href="https://berkalkulator.com/blog/2026/budapest-alberlet-fizetes-2026" target="_blank" rel="noopener">Budapest Albérlet-Preise 2026 + Kerület</a>
-        <a href="https://novekedes.hu/ingatlan/mutatjuk-az-uj-alberleti-arakat-varosonkent-es-keruletenkent" target="_blank" rel="noopener">Neue Mietpreise nach Bezirk</a>
-        <a href="https://rentola.com/for-rent/apartment/budapest/pets-allowed" target="_blank" rel="noopener">Rentola – Wohnungen „pets allowed" Budapest</a>
-        <a href="https://www.longtermlettings.com/rent/pt/monthly/scr/hungary/srg/budapest/pets/pets/" target="_blank" rel="noopener">Longtermlettings – Pet-Friendly Budapest</a>
-        <a href="https://athome-network.com/en/blog/at-home-news-8/paws-welcome-renting-with-pets-in-budapest-369" target="_blank" rel="noopener">Renting with Pets in Budapest (Guide)</a>
-        <a href="https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_de.htm" target="_blank" rel="noopener">EU-Regeln – Reisen mit Haustieren</a>
-        <a href="https://www.tiermedizinportal.de/magazin/einreisebestimmungen-einreise-nach-ungarn-mit-hund" target="_blank" rel="noopener">Einreise nach Ungarn mit Hund</a>
-        <a href="https://www.sandpfoten.com/ungarn/einreisebestimmungen" target="_blank" rel="noopener">Ungarn – Einreisebestimmungen Hunde</a>
-        <a href="https://univet.hu/de/studenten/studenteninfo/aufenthaltsgenehmigung/" target="_blank" rel="noopener">Registrierungskarte (univet.hu)</a>
-        <a href="https://budapest.diplo.de/hu-de/service/aufenthalt-deutscher-in-ungarn-2727166" target="_blank" rel="noopener">Aufenthalt Deutscher in Ungarn (Auswärtiges Amt)</a>
+        <a href="https://univet.hu/de/studenten/studenteninfo/aufenthaltsgenehmigung/" target="_blank" rel="noopener">Registrierungsbescheinigung (univet.hu)</a>
+        <a href="https://budapest.diplo.de/hu-de/service/aufenthalt-deutscher-in-ungarn-2727166" target="_blank" rel="noopener">Auswärtiges Amt: Aufenthalt in Ungarn</a>
         <a href="https://wir-in-ungarn.hu/dein-wegweiser-zur-lakcimkartya-so-beantragst-du-deinen-aufenthaltstitel-in-ungarn/" target="_blank" rel="noopener">Wegweiser zur Lakcímkártya</a>
-        <a href="https://gruenderfreunde.de/auswandern-nach-ungarn/" target="_blank" rel="noopener">Auswandern nach Ungarn 2026 (EU-Bürger)</a>
       </div>
     </div>
   </section>
@@ -428,7 +824,7 @@
 
 <footer>
   Zusammengestellt mit Liebe für deinen Start in Budapest. 🐕🐕<br>
-  Alle Preise &amp; Regeln Stand Juli 2026 – vor Ort/Antragstellung bitte gegenprüfen.
+  Preise &amp; Regeln: Recherche-Stand 22. Juli 2026 (Kurs 1 € ≈ 364 Ft) – vor Ort/Antragstellung bitte gegenprüfen.
   <div class="disclaimer">Keine Rechts- oder Steuerberatung. Häkchen &amp; Budget-Regler werden nur lokal in diesem Browser gespeichert (localStorage), nicht auf einem Server.</div>
 </footer>
 
