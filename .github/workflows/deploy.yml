@@ -34,6 +34,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Wohnungs-Radar in die Seite rendern
+        run: node radar/render.mjs
+
       - name: Verschlüsseln mit StatiCrypt
         env:
           STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}

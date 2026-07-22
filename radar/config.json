@@ -1,0 +1,14 @@
+{
+  "comment": "Suchkriterien für den Wohnungs-Radar. Bezirke römisch/klein, Preise in Ft, Flächen in m2.",
+  "searchUrls": [
+    "https://www.alberlet.hu/kiado_alberlet/ingatlan-tipus:lakas/kerulet:viii+ix+xiii+xiv+xix/haziallat-engedelyezve:igen/keres:advanced/limit:60",
+    "https://www.alberlet.hu/kiado-alberlet?ingatlan-tipus=lakas&kerulet=viii+ix+xiii+xiv+xix&haziallat-engedelyezve=igen&keres=advanced&limit=60/page:2"
+  ],
+  "districts": ["VIII", "IX", "XIII", "XIV", "XIX"],
+  "minM2": 25,
+  "maxM2": 60,
+  "maxFt": 220000,
+  "maxDetailFetchesPerRun": 20,
+  "keepDays": 14,
+  "maxItemsOnPage": 30
+}

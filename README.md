@@ -67,6 +67,34 @@ automatisch über die `id`.
 
 ---
 
+## 🔥 Wohnungs-Radar (automatische Suche)
+
+Der Workflow `.github/workflows/radar.yml` durchsucht **2× täglich** (ca. 6:30 & 16:30 Uhr
+Budapest-Zeit) alberlet.hu nach neuen Angeboten gemäß `radar/config.json`
+(Bezirke VIII/IX/XIII/XIV/XIX, 25–60 m², bis 220.000 Ft, haustierfreundlich),
+committet den Stand (`radar/seen.json`, `radar/latest.json`) und stößt automatisch
+einen neuen Pages-Deploy an — die Treffer erscheinen in der Sektion „🔥 Wohnungs-Radar"
+auf der Seite.
+
+- **Kriterien ändern:** `radar/config.json` editieren und pushen. Die Such-URL folgt dem
+  Muster `kerulet:viii+ix+…` / `haziallat-engedelyezve:igen` — Bezirke dort mitpflegen.
+- **Manuell laufen lassen:** Actions → „Wohnungs-Radar (alberlet.hu)" → Run workflow.
+- **ingatlan.com** blockt automatisierte Zugriffe → dort den nativen E-Mail-Alert
+  („hirdetésfigyelő") direkt auf der Plattform einrichten.
+
+### Optional: Telegram-Push bei neuen Treffern
+
+1. In Telegram [@BotFather](https://t.me/BotFather) öffnen → `/newbot` → Namen vergeben →
+   **Bot-Token** kopieren.
+2. Dem neuen Bot eine Nachricht schicken (einmal „Start" drücken).
+3. `https://api.telegram.org/bot<TOKEN>/getUpdates` im Browser öffnen →
+   die **chat.id** aus der Antwort kopieren.
+4. Repo → Settings → Secrets and variables → Actions → zwei Secrets anlegen:
+   `TELEGRAM_BOT_TOKEN` und `TELEGRAM_CHAT_ID`.
+
+Ab dann meldet der Radar echte Neuzugänge zusätzlich per Telegram (beim allerersten
+Lauf/Bestandsaufbau wird bewusst nicht gepusht).
+
 ## 📁 Struktur
 
 ```
