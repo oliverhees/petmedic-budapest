@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0f766e">
+<title>Budapest-Plan 🐕🐕 | Alles für deinen Start</title>
+<style>
+  :root{
+    --bg:#0b1220;
+    --card:#131c2e;
+    --card2:#0f1826;
+    --line:#25324a;
+    --text:#e8eef7;
+    --muted:#9fb0c8;
+    --teal:#2dd4bf;
+    --teal-dk:#0f766e;
+    --green:#34d399;
+    --amber:#fbbf24;
+    --red:#f87171;
+    --accent:#60a5fa;
+    --radius:16px;
+    --shadow:0 8px 24px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:linear-gradient(180deg,#0a101c 0%,#0b1220 100%);
+    color:var(--text);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:64px;
+  }
+  a{color:var(--teal)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+  header.hero{
+    padding:34px 16px 26px;
+    text-align:center;
+    background:radial-gradient(120% 120% at 50% 0%,rgba(45,212,191,.18) 0%,rgba(11,18,32,0) 60%);
+  }
+  header.hero .flag{font-size:34px;letter-spacing:4px}
+  header.hero h1{font-size:1.7rem;margin:.35em 0 .15em;line-height:1.2}
+  header.hero p{color:var(--muted);margin:.2em auto 0;max-width:44ch}
+
+  nav.toc{
+    position:sticky;top:0;z-index:20;
+    background:rgba(11,18,32,.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:10px 0;
+  }
+  nav.toc .wrap{display:flex;gap:8px;white-space:nowrap;padding:0 12px}
+  nav.toc a{
+    color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:600;
+    padding:6px 12px;border:1px solid var(--line);border-radius:999px;
+    background:var(--card2);flex:0 0 auto;
+  }
+  nav.toc a:active{color:var(--teal);border-color:var(--teal)}
+
+  section{padding:24px 0 6px}
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:18px;margin:14px 0;box-shadow:var(--shadow);
+  }
+  h2{font-size:1.28rem;margin:.2em 0 .1em;display:flex;align-items:center;gap:.4em}
+  h3{font-size:1.02rem;margin:1.1em 0 .3em}
+  .sub{color:var(--muted);font-size:.9rem;margin-top:0}
+
+  ul,ol{margin:.4em 0 .6em;padding-left:1.25em}
+  li{margin:.3em 0}
+  .lead{font-size:1.02rem}
+
+  .pill{display:inline-block;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:999px;letter-spacing:.3px}
+  .pill.ok{background:rgba(52,211,153,.15);color:var(--green);border:1px solid rgba(52,211,153,.35)}
+  .pill.no{background:rgba(248,113,113,.15);color:var(--red);border:1px solid rgba(248,113,113,.35)}
+  .pill.warn{background:rgba(251,191,36,.15);color:var(--amber);border:1px solid rgba(251,191,36,.35)}
+
+  .tldr li{margin:.5em 0}
+  .tldr b{color:#fff}
+
+  table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.6em 0}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.4px}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  .rank{list-style:none;padding-left:0}
+  .rank li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line)}
+  .rank li:last-child{border-bottom:0}
+  .rank .medal{font-size:1.3rem;flex:0 0 auto}
+
+  .note{border-left:3px solid var(--teal);background:var(--card2);padding:10px 14px;border-radius:0 10px 10px 0;margin:.7em 0}
+  .warnbox{border-left:3px solid var(--amber);background:rgba(251,191,36,.06)}
+  .badbox{border-left:3px solid var(--red);background:rgba(248,113,113,.06)}
+  .tip{border-left:3px solid var(--green);background:rgba(52,211,153,.06)}
+  .note b{color:#fff}
+
+  code.kw{background:#08111e;border:1px solid var(--line);color:var(--teal);padding:2px 7px;border-radius:6px;font-size:.88em}
+
+  /* budget calculator */
+  .calc label{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;margin:14px 0 4px;color:var(--muted)}
+  .calc label .val{color:#fff;font-weight:700;font-variant-numeric:tabular-nums}
+  input[type=range]{width:100%;accent-color:var(--teal);height:26px}
+  .result{margin-top:16px;padding:16px;border-radius:12px;text-align:center;transition:background .25s,border-color .25s;border:1px solid var(--line)}
+  .result .big{font-size:1.9rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1}
+  .result .lbl{font-size:.85rem;color:var(--muted);margin-top:2px}
+  .result.good{background:rgba(52,211,153,.12);border-color:rgba(52,211,153,.4)}
+  .result.mid{background:rgba(251,191,36,.12);border-color:rgba(251,191,36,.4)}
+  .result.bad{background:rgba(248,113,113,.12);border-color:rgba(248,113,113,.4)}
+  .result .status{font-weight:700;margin-top:6px}
+  .gap-row{display:flex;justify-content:space-between;font-size:.86rem;color:var(--muted);margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+  .gap-row span:last-child{color:#fff;font-weight:700;font-variant-numeric:tabular-nums}
+
+  /* checklists */
+  .check{list-style:none;padding-left:0}
+  .check li{display:flex;gap:12px;align-items:flex-start;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card2);margin:8px 0;cursor:pointer;transition:opacity .2s}
+  .check li.done{opacity:.5}
+  .check li.done .txt{text-decoration:line-through}
+  .check input[type=checkbox]{width:22px;height:22px;accent-color:var(--teal);flex:0 0 auto;margin-top:1px}
+  .phase-title{display:flex;align-items:center;gap:8px;margin:16px 0 6px;font-weight:700;color:var(--teal)}
+  .phase-title .n{background:var(--teal-dk);color:#fff;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:.8rem}
+
+  .btn{display:inline-flex;align-items:center;gap:6px;background:var(--card2);border:1px solid var(--line);color:var(--text);
+    padding:9px 16px;border-radius:10px;font-size:.88rem;font-weight:600;cursor:pointer;text-decoration:none}
+  .btn:active{border-color:var(--teal)}
+
+  .contact-grid{display:grid;gap:8px}
+  .contact-grid .row{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+  .contact-grid .row:last-child{border-bottom:0}
+  .contact-grid .k{color:var(--muted)}
+  .contact-grid .v{text-align:right;font-weight:600}
+
+  .sources{columns:1;font-size:.82rem}
+  .sources a{display:block;padding:5px 0;border-bottom:1px solid var(--line);color:var(--muted);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .sources a:active{color:var(--teal)}
+
+  footer{color:var(--muted);font-size:.8rem;text-align:center;padding:30px 16px 10px;max-width:52ch;margin:0 auto}
+  .disclaimer{font-size:.76rem;color:#6f7f96;margin-top:8px}
+
+  .top-link{position:fixed;right:14px;bottom:14px;z-index:30;background:var(--teal-dk);color:#fff;border:none;
+    width:46px;height:46px;border-radius:50%;font-size:1.1rem;box-shadow:var(--shadow);cursor:pointer;display:none}
+  .top-link.show{display:block}
+
+  @media(min-width:620px){
+    .sources{columns:2;column-gap:24px}
+    header.hero h1{font-size:2rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="flag">🇭🇺 🐕 🐕</div>
+  <h1>Dein Budapest-Plan</h1>
+  <p>Alles für den Start am McDaniel College – Wohnung, Budget, Finanzierung, Hunde &amp; Behörden. Mobil, offline nutzbar, immer griffbereit.</p>
+</header>
+
+<nav class="toc" aria-label="Inhalt">
+  <div class="wrap">
+    <a href="#tldr">⚡ Kurz</a>
+    <a href="#wohnen">🏠 Wohnung</a>
+    <a href="#budget">💶 Budget</a>
+    <a href="#geld">💰 Finanzierung</a>
+    <a href="#hunde">🐕 Hunde</a>
+    <a href="#behoerden">📋 Behörden</a>
+    <a href="#college">🎓 College</a>
+    <a href="#checkliste">✅ Checkliste</a>
+    <a href="#quellen">🔗 Quellen</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- TL;DR -->
+  <section id="tldr">
+    <div class="card tldr">
+      <h2>⚡ In 30 Sekunden</h2>
+      <ol>
+        <li><b>Die 730–800 € sind der „Ausländer-Preis".</b> Auf dem ungarischen Markt (ingatlan.com) ist eine haustierfreundliche 30 m²-Wohnung für <b>~450–580 € kalt</b> realistisch – das spart 170–240 € pro Monat.</li>
+        <li><b>Eigene Wohnung ist gesetzt</b> wegen der zwei Hunde 🐕🐕 – der Schlüssel ist der richtige Bezirk (Zugló!) und der Suchbegriff <code class="kw">kisállatbarát</code>.</li>
+        <li><b>BAföG fürs Vorbereitungsjahr: nein.</b> Aber sobald das echte Medizinstudium läuft (Semmelweis o. zurück in DE), gibt's <b>volles Auslands-BAföG</b> – das schon jetzt vorbereiten.</li>
+      </ol>
+      <div class="note tip"><b>Die Restlücke</b> (~60–260 €/Monat) schließt am elegantesten ein <b>Remote-Minijob für einen deutschen Arbeitgeber</b>: deutsches Lohnniveau, ungarische Lebenshaltungskosten. 😉</div>
+    </div>
+  </section>
+
+  <!-- WOHNEN -->
+  <section id="wohnen">
+    <h2>🏠 Wohnungs-Guide</h2>
+    <p class="sub">Der größte Hebel fürs Budget. Eigene 30 m²-Wohnung mit 2 Hunden – so wird's bezahlbar.</p>
+
+    <div class="card">
+      <h3>💰 Die Zahlen-Realität</h3>
+      <p class="sub">Stand Juli 2026 · Wechselkurs ~395 Ft = 1 €</p>
+      <div class="tbl-scroll">
+        <table>
+          <thead><tr><th>Was</th><th>Forint</th><th>In Euro</th></tr></thead>
+          <tbody>
+            <tr><td>Garzon (1-Zimmer), Spanne</td><td class="num">170.000–300.000 Ft</td><td class="num">~430–760 €</td></tr>
+            <tr><td>Budapest-Durchschnitt (alle Whg.)</td><td class="num">260.000 Ft</td><td class="num">~660 €</td></tr>
+            <tr><td>Günstigster Bezirk (XXIII.)</td><td class="num">167.000 Ft Median</td><td class="num">~420 €</td></tr>
+            <tr><td>Zentral &amp; möbliert (teures Ende)</td><td class="num">–</td><td class="num">650 € + 80 € NK</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note"><b>Merksatz:</b> Deutsche Portale zeigen das obere Drittel des Marktes. Der ungarische Markt (ingatlan.com) ist 150–250 €/Monat günstiger. Und: Die Nachfrage ist aktuell schwächer, Preise stagnieren → <b>Verhandlungsspielraum!</b></div>
+    </div>
+
+    <div class="card">
+      <h3>📍 Welche Bezirke? <span class="sub">(McDaniel liegt im VII. Bezirk)</span></h3>
+      <ul class="rank">
+        <li><span class="medal">🥇</span><div><b>XIV. Zugló</b> – Preis-Leistungs-Sieger: grün (Városliget/Stadtwäldchen direkt daneben = Hundeparadies 🌳), günstig, ~15–20 Min. zum College.</div></li>
+        <li><span class="medal">🥈</span><div><b>VIII. (äußerer Teil) / IX. Ferencváros</b> – nah dran, im VIII. Bezirk ab ca. 170.000 Ft (~430 €).</div></li>
+        <li><span class="medal">🥉</span><div><b>X., XIX., XX. Bezirk</b> – am günstigsten, dafür 25–35 Min. Fahrt.</div></li>
+        <li><span class="medal">❌</span><div><b>V., VI., VII. Innenstadt</b> – Touristenpreise, mit Hunden eh unpraktisch.</div></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🔎 Wo suchen – in dieser Reihenfolge</h3>
+      <ol>
+        <li><b>ingatlan.com</b> – DIE ungarische Plattform. Filter: <code class="kw">kisállatbarát</code> (haustierfreundlich) + max. 220.000 Ft + Bezirke VIII, IX, X, XIV.</li>
+        <li><b>Rentola</b> – über 100 Wohnungen mit „pets allowed" in Budapest.</li>
+        <li><b>Longtermlettings / HousingAnywhere</b> – Filter „pets", teurer aber englischsprachig &amp; sicher.</li>
+        <li><b>Facebook-Gruppen:</b> „Kiadó lakás Budapest", „Budapest Flats for Rent".</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>🐕 So überzeugst du den Vermieter (bei ZWEI Hunden wichtig!)</h3>
+      <ul>
+        <li>Ein kurzes <b>„Hunde-Portfolio"</b> erstellen: Fotos, Rasse, Charakter + eine Referenz vom bisherigen Vermieter, dass die Hunde brav sind.</li>
+        <li>Zusätzliche <b>Haustier-Kaution</b> anbieten und ggf. ein Kennenlern-Treffen arrangieren.</li>
+        <li>Alle Hunde-Vereinbarungen <b>schriftlich in den Mietvertrag</b> aufnehmen.</li>
+      </ul>
+      <div class="note warnbox"><b>⚠️ Mietbetrug</b> zielt oft auf internationale Studierende. Nie Geld an unbekannte Vermieter überweisen, bevor du die Wohnung (oder eine verifizierte Plattform) gesehen hast. Kaution: meist 2 Monatsmieten + ggf. Hunde-Kaution → <b>~1.200–1.500 € Startkapital</b> einplanen.</div>
+      <div class="note tip"><b>🎯 Insider:</b> Das McDaniel College hilft selbst bei der Wohnungssuche, Krankenversicherung &amp; offiziellen Angelegenheiten. Dort direkt anfragen: <a href="mailto:premed@mcdaniel.hu">premed@mcdaniel.hu</a></div>
+    </div>
+  </section>
+
+  <!-- BUDGET -->
+  <section id="budget">
+    <h2>💶 Budget-Rechner</h2>
+    <p class="sub">Regler schieben → sofort sehen, ob's aufgeht. Wird auf deinem Gerät gespeichert.</p>
+    <div class="card calc">
+      <label>Miete (kalt) <span class="val" id="v-rent">480 €</span></label>
+      <input type="range" id="rent" min="350" max="850" step="10" value="480">
+
+      <label>Nebenkosten <span class="val" id="v-util">80 €</span></label>
+      <input type="range" id="util" min="30" max="180" step="10" value="80">
+
+      <label>Leben (Essen, Öffis, Hunde …) <span class="val" id="v-life">400 €</span></label>
+      <input type="range" id="life" min="200" max="700" step="10" value="400">
+
+      <label>Verfügbares Budget / Monat <span class="val" id="v-income">500 €</span></label>
+      <input type="range" id="income" min="300" max="1400" step="10" value="500">
+
+      <div class="result" id="result">
+        <div class="big" id="r-total">960 €</div>
+        <div class="lbl">Gesamtkosten pro Monat</div>
+        <div class="status" id="r-status">–</div>
+        <div class="gap-row"><span>Lücke / Puffer</span><span id="r-gap">–</span></div>
+      </div>
+      <div class="note" style="margin-top:14px"><b>Tipp:</b> Zeigt die Ampel Rot, ist die Lücke der Betrag, den ein Remote- oder Teilzeitjob decken müsste. Ein deutscher Remote-Minijob bringt realistisch ~600 €/Monat.</div>
+    </div>
+  </section>
+
+  <!-- FINANZIERUNG -->
+  <section id="geld">
+    <h2>💰 Finanzierung</h2>
+
+    <div class="card">
+      <h3><span class="pill no">Geht NICHT</span> &nbsp;fürs Vorbereitungsjahr</h3>
+      <ul>
+        <li><b>BAföG:</b> Das McDaniel-Premed-Programm ist ein privater Vorbereitungskurs, kein förderfähiges Hochschulstudium. Ein österreichisches Gerichtsurteil hat sogar explizit festgehalten, dass das Vorbereitungsjahr am McDaniel College für sich allein keine Berufsausbildung darstellt.</li>
+        <li><b>Kindergeld:</b> Endet mit 25 → raus.</li>
+        <li><b>KfW-Studienkredit:</b> Setzt Einschreibung an einer deutschen Hochschule voraus.</li>
+        <li><b>Bildungskredit der Bundesregierung:</b> Nur für fortgeschrittene Ausbildungsphasen.</li>
+      </ul>
+      <div class="note"><b>💡 Trotzdem-Tipp:</b> Eine formlose Anfrage kostet nichts. Zuständig für Ungarn ist das <b>Studentenwerk Chemnitz-Zwickau</b> (<a href="mailto:auslands.bafoeg@swcz.tu-chemnitz.de">auslands.bafoeg@swcz.tu-chemnitz.de</a>) – einmal schriftlich nachfragen schafft Gewissheit.</div>
+    </div>
+
+    <div class="card">
+      <h3><span class="pill ok">Geht JETZT</span></h3>
+      <ul>
+        <li><b>Günstiger wohnen</b> (siehe oben) → spart 170–240 €/Monat.</li>
+        <li><b>Remote-Minijob für einen deutschen Arbeitgeber</b> behalten – deutsches Lohnniveau, ungarische Kosten. Vorher Sozialversicherung klären (Stichwort <b>A1-Bescheinigung</b>).</li>
+        <li><b>Lokaler Teilzeitjob:</b> EU-Bürger dürfen in Ungarn unbeschränkt arbeiten. Studentenfreundliche Jobs in Gastro, Englisch-Nachhilfe, IT, Callcentern.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3><span class="pill ok">Ab dem echten Studium</span> &nbsp;fließt BAföG 🎓</h3>
+      <p>Sobald sie am deutschsprachigen Studiengang der <b>Semmelweis</b> (oder zurück in DE) eingeschrieben ist:</p>
+      <ul>
+        <li>In Ungarn kann das <b>ganze Studium durch BAföG</b> finanziert werden – innerhalb der EU ohne Begrenzung auf ein Jahr.</li>
+        <li>Die höheren Auslands-Fördersätze führen oft dazu, dass gefördert wird, obwohl es im Inland wegen des Elterneinkommens nicht reichen würde.</li>
+        <li>Plus Zuschuss zu Studiengebühren (bis ca. 5.600 € für max. 1 Jahr), Reisekostenpauschale und KV-Zuschlag.</li>
+        <li>Altersgrenze ist inzwischen 45 → ihre 25+ sind kein Problem.</li>
+      </ul>
+      <div class="note tip"><b>⏰ Wichtig:</b> Antrag mindestens <b>6 Monate vor Beginn</b> stellen → das könnt ihr quasi jetzt schon vorbereiten!</div>
+    </div>
+  </section>
+
+  <!-- HUNDE -->
+  <section id="hunde">
+    <h2>🐕 Mit 2 Hunden nach Budapest</h2>
+    <div class="card">
+      <h3>Einreise (EU) – die Pflicht-Liste</h3>
+      <ul>
+        <li><b>Mikrochip</b> (ISO-Norm) – muss vor der Tollwutimpfung gesetzt sein.</li>
+        <li><b>EU-Heimtierausweis</b> vom Tierarzt.</li>
+        <li><b>Gültige Tollwutimpfung</b> – muss <b>mindestens 21 Tage vor der Einreise</b> erfolgt sein (bei Erstimpfung). ⏰ Rechtzeitig planen!</li>
+      </ul>
+      <div class="note tip"><b>Gute Nachrichten:</b> Keine Quarantäne bei EU-Einreise, <b>keine Rasselisten</b> in Ungarn, und <b>keine Hundesteuer</b> wie in Deutschland.</div>
+    </div>
+    <div class="card">
+      <h3>Vor Ort</h3>
+      <ul>
+        <li><b>Öffis:</b> Hunde erlaubt – mit <b>Maulkorb und Leine</b>.</li>
+        <li><b>Beste Hunde-Gegend:</b> Zugló (XIV.) am Városliget/Stadtwäldchen – viel Grün zum Auslaufen. 🌳</li>
+        <li>Chip &amp; Impfstatus nach dem Umzug beim örtlichen Tierarzt aktuell halten.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BEHÖRDEN -->
+  <section id="behoerden">
+    <h2>📋 Behörden-Timeline (EU-Bürgerin)</h2>
+    <div class="card">
+      <p class="sub">Als EU-Bürgerin darfst du frei einreisen. Bei Aufenthalt über 90 Tage sind zwei Schritte fällig:</p>
+      <ul class="rank">
+        <li><span class="medal">1️⃣</span><div><b>Bis Tag 93: Registrierungskarte</b> (Registrierungsbescheinigung / „registration card") bei der Einwanderungsbehörde beantragen. Nötig u. a.: Nachweis Studienplatz/Aufenthaltszweck &amp; Krankenversicherung.</div></li>
+        <li><span class="medal">2️⃣</span><div><b>Danach: Lakcímkártya</b> (Adress-/Wohnkarte) – wird nach dem Einzug mit dem Mietvertrag beantragt. Wichtig für fast alle Behördengänge.</div></li>
+      </ul>
+      <div class="note"><b>Tipp:</b> Krankenversicherung frühzeitig klären (EHIC reicht für Studium/Daueraufenthalt oft nicht) – am besten schon vor der Einreise.</div>
+    </div>
+  </section>
+
+  <!-- COLLEGE -->
+  <section id="college">
+    <h2>🎓 McDaniel College – Fakten</h2>
+    <div class="card">
+      <div class="contact-grid">
+        <div class="row"><span class="k">Programm</span><span class="v">Pre-Medical Track</span></div>
+        <div class="row"><span class="k">Ort</span><span class="v">VII. Bezirk, Budapest</span></div>
+        <div class="row"><span class="k">Ziel danach</span><span class="v">Medizinstudium (Semmelweis / DE)</span></div>
+        <div class="row"><span class="k">Kontakt</span><span class="v"><a href="mailto:premed@mcdaniel.hu">premed@mcdaniel.hu</a></span></div>
+        <div class="row"><span class="k">Web</span><span class="v"><a href="https://mcdaniel.hu/home/pre-med-program/" target="_blank" rel="noopener">mcdaniel.hu</a></span></div>
+      </div>
+      <div class="note tip">Das College bietet Unterstützung bei Wohnungssuche, Krankenversicherung und offiziellen Angelegenheiten – als erste Anlaufstelle nutzen, die kennen den Markt.</div>
+    </div>
+  </section>
+
+  <!-- CHECKLISTE -->
+  <section id="checkliste">
+    <h2>✅ Master-Checkliste</h2>
+    <p class="sub">Häkchen werden automatisch auf deinem Gerät gespeichert. In 3 Phasen.</p>
+
+    <div class="card">
+      <div class="phase-title"><span class="n">1</span> Vorbereiten (jetzt)</div>
+      <ul class="check" data-check>
+        <li><input type="checkbox" id="c1"><span class="txt">Wohnungsstrategie: auf <b>ingatlan.com</b> mit Filter <code class="kw">kisállatbarát</code> + max. 220.000 Ft in Bezirken VIII, IX, X, XIV suchen</span></li>
+        <li><input type="checkbox" id="c2"><span class="txt"><b>Hunde-Portfolio</b> basteln (1 Seite: Fotos, Rasse, Charakter, Referenz)</span></li>
+        <li><input type="checkbox" id="c3"><span class="txt"><b>~1.500 € Startkapital</b> für Kaution + Hunde-Kaution zurücklegen</span></li>
+        <li><input type="checkbox" id="c4"><span class="txt"><b>McDaniel anschreiben</b> (premed@mcdaniel.hu) wegen Wohnungshilfe &amp; hundefreundlicher Vermieter</span></li>
+        <li><input type="checkbox" id="c5"><span class="txt"><b>Formlose BAföG-Anfrage</b> ans Studentenwerk Chemnitz-Zwickau (Vorjahr klären + Studium vorbereiten)</span></li>
+        <li><input type="checkbox" id="c6"><span class="txt"><b>Nebenjob checken:</b> Remote-DE-Job vor lokalem Job prüfen (A1-Bescheinigung nicht vergessen)</span></li>
+      </ul>
+
+      <div class="phase-title"><span class="n">2</span> Hunde &amp; Einreise</div>
+      <ul class="check" data-check>
+        <li><input type="checkbox" id="c7"><span class="txt"><b>Mikrochip</b> beider Hunde prüfen (ISO-Norm, vor Tollwutimpfung)</span></li>
+        <li><input type="checkbox" id="c8"><span class="txt"><b>Tollwutimpfung</b> auffrischen – mind. 21 Tage vor Einreise!</span></li>
+        <li><input type="checkbox" id="c9"><span class="txt"><b>EU-Heimtierausweis</b> für beide Hunde besorgen</span></li>
+        <li><input type="checkbox" id="c10"><span class="txt"><b>Krankenversicherung</b> für Ungarn klären (vor Einreise)</span></li>
+      </ul>
+
+      <div class="phase-title"><span class="n">3</span> Vor Ort in Budapest</div>
+      <ul class="check" data-check>
+        <li><input type="checkbox" id="c11"><span class="txt">Wohnung besichtigen (nie blind Geld überweisen!) &amp; <b>Mietvertrag</b> mit Hunde-Klausel unterschreiben</span></li>
+        <li><input type="checkbox" id="c12"><span class="txt"><b>Registrierungskarte</b> bis Tag 93 beantragen</span></li>
+        <li><input type="checkbox" id="c13"><span class="txt"><b>Lakcímkártya</b> (Adresskarte) mit Mietvertrag beantragen</span></li>
+        <li><input type="checkbox" id="c14"><span class="txt">Örtlichen <b>Tierarzt</b> finden &amp; Impfstatus aktuell halten</span></li>
+        <li><input type="checkbox" id="c15"><span class="txt"><b>BAföG-Antrag fürs Studium</b> stellen (6 Monate vor Studienbeginn)</span></li>
+      </ul>
+
+      <button class="btn" id="reset" style="margin-top:14px">↺ Alle Häkchen zurücksetzen</button>
+    </div>
+  </section>
+
+  <!-- QUELLEN -->
+  <section id="quellen">
+    <h2>🔗 Quellen</h2>
+    <div class="card">
+      <div class="sources">
+        <a href="https://mcdaniel.hu/home/pre-med-program/" target="_blank" rel="noopener">McDaniel College – Pre-Medical Track</a>
+        <a href="https://medicalstudyhungary.com/pre-medical" target="_blank" rel="noopener">Pre-Medical Track (medicalstudyhungary)</a>
+        <a href="https://ungarnstudium.hu/Vorbereitungsjahr" target="_blank" rel="noopener">Vorbereitungsjahr McDaniel (ungarnstudium.hu)</a>
+        <a href="https://www.studieren-in-ungarn.de/357,1,bafoeg.html" target="_blank" rel="noopener">BAföG – Studieren in Ungarn</a>
+        <a href="https://www.bafoeg-rechner.de/auslandsbafoeg/ungarn.php" target="_blank" rel="noopener">Auslands-BAföG Ungarn (bafoeg-rechner.de)</a>
+        <a href="https://www.auslandsbafoeg.de/gesundheit-medizin-im-ausland-studieren/" target="_blank" rel="noopener">Medizin im Ausland – Auslands-BAföG</a>
+        <a href="https://www.medigate.eu/ueberblick/auslands-bafoeg-waehrend-des-medizinstudiums/" target="_blank" rel="noopener">Auslands-BAföG während des Medizinstudiums</a>
+        <a href="https://semmelweis.hu/deutsch/bewerbung/haeufig-gestellte-fragen-faq/" target="_blank" rel="noopener">Semmelweis – FAQ Deutschsprachiges Studium</a>
+        <a href="https://tozsdeforum.hu/extra/eletvitel/alberlet-paradoxon-2026-amikor-a-stagnalas-a-legjobb-hir/" target="_blank" rel="noopener">Albérlet-Paradoxon 2026 (Mietmarkt)</a>
+        <a href="https://berkalkulator.com/blog/2026/budapest-alberlet-fizetes-2026" target="_blank" rel="noopener">Budapest Albérlet-Preise 2026 + Kerület</a>
+        <a href="https://novekedes.hu/ingatlan/mutatjuk-az-uj-alberleti-arakat-varosonkent-es-keruletenkent" target="_blank" rel="noopener">Neue Mietpreise nach Bezirk</a>
+        <a href="https://rentola.com/for-rent/apartment/budapest/pets-allowed" target="_blank" rel="noopener">Rentola – Wohnungen „pets allowed" Budapest</a>
+        <a href="https://www.longtermlettings.com/rent/pt/monthly/scr/hungary/srg/budapest/pets/pets/" target="_blank" rel="noopener">Longtermlettings – Pet-Friendly Budapest</a>
+        <a href="https://athome-network.com/en/blog/at-home-news-8/paws-welcome-renting-with-pets-in-budapest-369" target="_blank" rel="noopener">Renting with Pets in Budapest (Guide)</a>
+        <a href="https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_de.htm" target="_blank" rel="noopener">EU-Regeln – Reisen mit Haustieren</a>
+        <a href="https://www.tiermedizinportal.de/magazin/einreisebestimmungen-einreise-nach-ungarn-mit-hund" target="_blank" rel="noopener">Einreise nach Ungarn mit Hund</a>
+        <a href="https://www.sandpfoten.com/ungarn/einreisebestimmungen" target="_blank" rel="noopener">Ungarn – Einreisebestimmungen Hunde</a>
+        <a href="https://univet.hu/de/studenten/studenteninfo/aufenthaltsgenehmigung/" target="_blank" rel="noopener">Registrierungskarte (univet.hu)</a>
+        <a href="https://budapest.diplo.de/hu-de/service/aufenthalt-deutscher-in-ungarn-2727166" target="_blank" rel="noopener">Aufenthalt Deutscher in Ungarn (Auswärtiges Amt)</a>
+        <a href="https://wir-in-ungarn.hu/dein-wegweiser-zur-lakcimkartya-so-beantragst-du-deinen-aufenthaltstitel-in-ungarn/" target="_blank" rel="noopener">Wegweiser zur Lakcímkártya</a>
+        <a href="https://gruenderfreunde.de/auswandern-nach-ungarn/" target="_blank" rel="noopener">Auswandern nach Ungarn 2026 (EU-Bürger)</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Zusammengestellt mit Liebe für deinen Start in Budapest. 🐕🐕<br>
+  Alle Preise &amp; Regeln Stand Juli 2026 – vor Ort/Antragstellung bitte gegenprüfen.
+  <div class="disclaimer">Keine Rechts- oder Steuerberatung. Häkchen &amp; Budget-Regler werden nur lokal in diesem Browser gespeichert (localStorage), nicht auf einem Server.</div>
+</footer>
+
+<button class="top-link" id="topBtn" aria-label="Nach oben">↑</button>
+
+<script>
+(function(){
+  "use strict";
+  var LS_OK = (function(){ try{ var k="__t"; localStorage.setItem(k,"1"); localStorage.removeItem(k); return true; }catch(e){ return false; } })();
+  function get(k,d){ try{ var v=localStorage.getItem(k); return v===null?d:v; }catch(e){ return d; } }
+  function set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+
+  /* ---- Budget-Rechner ---- */
+  var ids = ["rent","util","life","income"];
+  var suffix = "€";
+  function fmt(n){ return n.toLocaleString("de-DE") + " " + suffix; }
+  function recalc(){
+    var rent=+document.getElementById("rent").value;
+    var util=+document.getElementById("util").value;
+    var life=+document.getElementById("life").value;
+    var income=+document.getElementById("income").value;
+    document.getElementById("v-rent").textContent=fmt(rent);
+    document.getElementById("v-util").textContent=fmt(util);
+    document.getElementById("v-life").textContent=fmt(life);
+    document.getElementById("v-income").textContent=fmt(income);
+    var total=rent+util+life;
+    var gap=income-total;
+    document.getElementById("r-total").textContent=fmt(total);
+    var res=document.getElementById("result");
+    var status=document.getElementById("r-status");
+    var gapEl=document.getElementById("r-gap");
+    res.classList.remove("good","mid","bad");
+    if(gap>=0){
+      res.classList.add("good");
+      status.textContent="✅ Passt – Puffer da";
+      gapEl.textContent="+ "+fmt(gap);
+    } else if(gap>=-250){
+      res.classList.add("mid");
+      status.textContent="⚠️ Knapp – kleine Lücke";
+      gapEl.textContent="− "+fmt(Math.abs(gap));
+    } else {
+      res.classList.add("bad");
+      status.textContent="🔴 Lücke – Job/Sparen nötig";
+      gapEl.textContent="− "+fmt(Math.abs(gap));
+    }
+  }
+  ids.forEach(function(id){
+    var el=document.getElementById(id);
+    var saved=get("budget_"+id,null);
+    if(saved!==null) el.value=saved;
+    el.addEventListener("input",function(){ set("budget_"+id, el.value); recalc(); });
+  });
+  recalc();
+
+  /* ---- Checklisten ---- */
+  var boxes = document.querySelectorAll('.check input[type=checkbox]');
+  boxes.forEach(function(box){
+    var li=box.closest("li");
+    var key="chk_"+box.id;
+    if(get(key,"0")==="1"){ box.checked=true; li.classList.add("done"); }
+    function sync(){ li.classList.toggle("done",box.checked); set(key, box.checked?"1":"0"); }
+    box.addEventListener("change",sync);
+    li.addEventListener("click",function(e){
+      if(e.target!==box){ box.checked=!box.checked; sync(); }
+    });
+  });
+  var resetBtn=document.getElementById("reset");
+  if(resetBtn){
+    resetBtn.addEventListener("click",function(){
+      boxes.forEach(function(box){
+        box.checked=false;
+        box.closest("li").classList.remove("done");
+        set("chk_"+box.id,"0");
+      });
+    });
+  }
+
+  /* ---- Back to top ---- */
+  var topBtn=document.getElementById("topBtn");
+  window.addEventListener("scroll",function(){
+    if(window.scrollY>500) topBtn.classList.add("show"); else topBtn.classList.remove("show");
+  },{passive:true});
+  topBtn.addEventListener("click",function(){ window.scrollTo({top:0,behavior:"smooth"}); });
+
+  if(!LS_OK){
+    console.warn("localStorage nicht verfügbar – Häkchen/Regler werden diese Sitzung nicht gespeichert.");
+  }
+})();
+</script>
+</body>
+</html>

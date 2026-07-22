@@ -1,0 +1,73 @@
+name: Deploy (StatiCrypt → GitHub Pages)
+
+# Verschlüsselt index.html mit dem Passwort aus dem Secret STATICRYPT_PASSWORD
+# und veröffentlicht das Ergebnis auf GitHub Pages.
+#
+# Einmalig einrichten:
+#   1. Settings → Secrets and variables → Actions → Secret STATICRYPT_PASSWORD anlegen
+#   2. Settings → Pages → Source = "GitHub Actions"
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Nur ein Deploy gleichzeitig; laufende Deploys nicht abbrechen.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Verschlüsseln mit StatiCrypt
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
+        run: |
+          if [ -z "$STATICRYPT_PASSWORD" ]; then
+            echo "::error::Secret STATICRYPT_PASSWORD ist nicht gesetzt. Bitte unter Settings → Secrets and variables → Actions anlegen."
+            exit 1
+          fi
+          mkdir -p _site
+          npx --yes staticrypt index.html \
+            --password "$STATICRYPT_PASSWORD" \
+            --salt "$(node -e "console.log(require('./.staticrypt.json').salt)")" \
+            --remember 90 \
+            --template-title "Budapest-Plan" \
+            --template-instructions "Bitte Passwort eingeben." \
+            --template-button "Öffnen" \
+            --template-error "Falsches Passwort – bitte erneut versuchen." \
+            --short \
+            --directory _site
+          # StatiCrypt legt die verschlüsselte Datei als _site/index.html ab.
+          test -f _site/index.html
+
+      - name: Upload Pages-Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
