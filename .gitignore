@@ -1,0 +1,4 @@
+# StatiCrypt / build output
+_site/
+node_modules/
+.DS_Store
