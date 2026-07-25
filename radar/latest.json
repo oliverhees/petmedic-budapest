@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-25T06:36:33.114Z",
+ "generatedAt": "2026-07-25T15:38:56.248Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 31,
  "items": [
+  {
+   "id": "780988",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIX-kerulet-pozsony-utca-33m2-2-szoba_780988",
+   "district": "XIX",
+   "m2": 33,
+   "rooms": "2",
+   "street": "Pozsony Utca",
+   "priceFt": 200000,
+   "firstSeen": "2026-07-25T15:38:56.248Z",
+   "initial": false
+  },
   {
    "id": "780858",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-garam-utca-31m2-1-szoba_780858",
