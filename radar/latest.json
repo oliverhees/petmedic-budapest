@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-30T07:09:37.550Z",
+ "generatedAt": "2026-07-30T16:06:25.247Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -36,17 +36,6 @@
    "priceFt": 195000,
    "firstSeen": "2026-07-22T15:58:33.712Z",
    "initial": false
-  },
-  {
-   "id": "780782",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-rona-utca-53m2-2-szoba_780782",
-   "district": "XIV",
-   "m2": 53,
-   "rooms": "2",
-   "street": "Rona Utca",
-   "priceFt": 177000,
-   "firstSeen": "2026-07-22T12:52:16.731Z",
-   "initial": true
   },
   {
    "id": "780482",
