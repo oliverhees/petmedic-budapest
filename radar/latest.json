@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-06T07:13:43.420Z",
+ "generatedAt": "2026-08-07T05:55:44.613Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -13,19 +13,8 @@
   "maxM2": 60
  },
  "newCount": 0,
- "totalMatching": 35,
+ "totalMatching": 33,
  "items": [
-  {
-   "id": "771701",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-amerikai-ut-40m2-2-szoba_771701",
-   "district": "XIV",
-   "m2": 40,
-   "rooms": "2",
-   "street": "Amerikai Ut",
-   "priceFt": 210000,
-   "firstSeen": "2026-08-05T07:11:05.623Z",
-   "initial": false
-  },
   {
    "id": "781390",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-koris-utca-32m2-1-szoba_781390",
