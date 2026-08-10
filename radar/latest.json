@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-09T15:00:58.719Z",
+ "generatedAt": "2026-08-10T05:53:17.592Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,7 +12,7 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 1,
+ "newCount": 0,
  "totalMatching": 32,
  "items": [
   {
@@ -35,28 +35,6 @@
    "street": "Erkel Utca",
    "priceFt": 220000,
    "firstSeen": "2026-08-07T15:25:26.865Z",
-   "initial": false
-  },
-  {
-   "id": "781390",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-koris-utca-32m2-1-szoba_781390",
-   "district": "VIII",
-   "m2": 32,
-   "rooms": "1",
-   "street": "Koris Utca",
-   "priceFt": 200000,
-   "firstSeen": "2026-08-04T07:09:46.858Z",
-   "initial": false
-  },
-  {
-   "id": "781388",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-koris-utca-36m2-1-szoba_781388",
-   "district": "VIII",
-   "m2": 36,
-   "rooms": "1",
-   "street": "Koris Utca",
-   "priceFt": 210000,
-   "firstSeen": "2026-08-04T07:09:46.858Z",
    "initial": false
   }
  ]
