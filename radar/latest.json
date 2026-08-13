@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-13T05:54:08.609Z",
+ "generatedAt": "2026-08-13T15:30:37.887Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 36,
+ "newCount": 1,
+ "totalMatching": 38,
  "items": [
+  {
+   "id": "781928",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-karpat-utca-36m2-1-szoba_781928",
+   "district": "XIII",
+   "m2": 36,
+   "rooms": "1",
+   "street": "Karpat Utca",
+   "priceFt": 220000,
+   "firstSeen": "2026-08-13T15:30:37.887Z",
+   "initial": false
+  },
   {
    "id": "781714",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-dugonics-utca-27m2-1-szoba_781714",
