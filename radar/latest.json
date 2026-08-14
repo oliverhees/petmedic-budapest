@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-14T05:53:31.377Z",
+ "generatedAt": "2026-08-14T15:22:05.964Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 38,
+ "newCount": 1,
+ "totalMatching": 39,
  "items": [
+  {
+   "id": "782001",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-sarkany-utca-43m2-2-szoba_782001",
+   "district": "VIII",
+   "m2": 43,
+   "rooms": "2",
+   "street": "Sarkany Utca",
+   "priceFt": 160000,
+   "firstSeen": "2026-08-14T15:22:05.964Z",
+   "initial": false
+  },
   {
    "id": "781928",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-karpat-utca-36m2-1-szoba_781928",
