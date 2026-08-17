@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-17T05:06:51.017Z",
+ "generatedAt": "2026-08-17T14:53:36.750Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 39,
  "items": [
+  {
+   "id": "782123",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-karpat-utca-37m2-1-szoba_782123",
+   "district": "XIII",
+   "m2": 37,
+   "rooms": "1",
+   "street": "Karpat Utca",
+   "priceFt": 180000,
+   "firstSeen": "2026-08-17T14:53:36.750Z",
+   "initial": false
+  },
   {
    "id": "782006",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szekszardi-utca-35m2-1-szoba_782006",
@@ -35,17 +46,6 @@
    "street": "Sarkany Utca",
    "priceFt": 160000,
    "firstSeen": "2026-08-14T15:22:05.964Z",
-   "initial": false
-  },
-  {
-   "id": "781928",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-karpat-utca-36m2-1-szoba_781928",
-   "district": "XIII",
-   "m2": 36,
-   "rooms": "1",
-   "street": "Karpat Utca",
-   "priceFt": 220000,
-   "firstSeen": "2026-08-13T15:30:37.887Z",
    "initial": false
   },
   {
