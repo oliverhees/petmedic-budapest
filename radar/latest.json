@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-18T05:01:05.386Z",
+ "generatedAt": "2026-08-18T15:01:12.707Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 40,
+ "newCount": 1,
+ "totalMatching": 39,
  "items": [
+  {
+   "id": "782182",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-kobanyai-ut-30m2-1-szoba_782182",
+   "district": "IX",
+   "m2": 30,
+   "rooms": "1",
+   "street": "Kobanyai Ut",
+   "priceFt": 175000,
+   "firstSeen": "2026-08-18T15:01:12.707Z",
+   "initial": false
+  },
   {
    "id": "782123",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-karpat-utca-37m2-1-szoba_782123",
