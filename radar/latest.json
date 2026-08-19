@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-19T05:01:14.466Z",
+ "generatedAt": "2026-08-19T15:01:30.295Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,8 +12,8 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 1,
- "totalMatching": 41,
+ "newCount": 0,
+ "totalMatching": 40,
  "items": [
   {
    "id": "776972",
@@ -35,17 +35,6 @@
    "street": "Kobanyai Ut",
    "priceFt": 175000,
    "firstSeen": "2026-08-18T15:01:12.707Z",
-   "initial": false
-  },
-  {
-   "id": "782006",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szekszardi-utca-35m2-1-szoba_782006",
-   "district": "XIII",
-   "m2": 35,
-   "rooms": "1",
-   "street": "Szekszardi Utca",
-   "priceFt": 199000,
-   "firstSeen": "2026-08-15T04:55:10.105Z",
    "initial": false
   },
   {
