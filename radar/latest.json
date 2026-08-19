@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-18T15:01:12.707Z",
+ "generatedAt": "2026-08-19T05:01:14.466Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -13,8 +13,19 @@
   "maxM2": 60
  },
  "newCount": 1,
- "totalMatching": 39,
+ "totalMatching": 41,
  "items": [
+  {
+   "id": "776972",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szent-laszlo-ut-30m2-1-szoba_776972",
+   "district": "XIII",
+   "m2": 30,
+   "rooms": "1",
+   "street": "Szent Laszlo Ut",
+   "priceFt": 165000,
+   "firstSeen": "2026-08-19T05:01:14.466Z",
+   "initial": false
+  },
   {
    "id": "782182",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-kobanyai-ut-30m2-1-szoba_782182",
@@ -24,17 +35,6 @@
    "street": "Kobanyai Ut",
    "priceFt": 175000,
    "firstSeen": "2026-08-18T15:01:12.707Z",
-   "initial": false
-  },
-  {
-   "id": "782123",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-karpat-utca-37m2-1-szoba_782123",
-   "district": "XIII",
-   "m2": 37,
-   "rooms": "1",
-   "street": "Karpat Utca",
-   "priceFt": 180000,
-   "firstSeen": "2026-08-17T14:53:36.750Z",
    "initial": false
   },
   {
