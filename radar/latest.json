@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-23T05:00:33.807Z",
+ "generatedAt": "2026-08-23T14:49:13.478Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -13,7 +13,7 @@
   "maxM2": 60
  },
  "newCount": 0,
- "totalMatching": 40,
+ "totalMatching": 38,
  "items": [
   {
    "id": "776972",
@@ -35,17 +35,6 @@
    "street": "Kobanyai Ut",
    "priceFt": 175000,
    "firstSeen": "2026-08-18T15:01:12.707Z",
-   "initial": false
-  },
-  {
-   "id": "781714",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-dugonics-utca-27m2-1-szoba_781714",
-   "district": "VIII",
-   "m2": 27,
-   "rooms": "1",
-   "street": "Dugonics Utca",
-   "priceFt": 170000,
-   "firstSeen": "2026-08-09T15:00:58.719Z",
    "initial": false
   }
  ]
