@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-24T05:10:15.561Z",
+ "generatedAt": "2026-08-24T15:09:55.431Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 38,
+ "newCount": 1,
+ "totalMatching": 37,
  "items": [
+  {
+   "id": "782409",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-bosnyak-ter-37m2-1-szoba_782409",
+   "district": "XIV",
+   "m2": 37,
+   "rooms": "1",
+   "street": "Bosnyak Ter",
+   "priceFt": 190000,
+   "firstSeen": "2026-08-24T15:09:55.431Z",
+   "initial": false
+  },
   {
    "id": "776972",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szent-laszlo-ut-30m2-1-szoba_776972",
