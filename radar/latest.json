@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-26T05:03:47.835Z",
+ "generatedAt": "2026-08-26T15:58:54.486Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,8 +12,8 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 1,
- "totalMatching": 35,
+ "newCount": 0,
+ "totalMatching": 34,
  "items": [
   {
    "id": "782478",
@@ -46,17 +46,6 @@
    "street": "Szent Laszlo Ut",
    "priceFt": 165000,
    "firstSeen": "2026-08-19T05:01:14.466Z",
-   "initial": false
-  },
-  {
-   "id": "782182",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-kobanyai-ut-30m2-1-szoba_782182",
-   "district": "IX",
-   "m2": 30,
-   "rooms": "1",
-   "street": "Kobanyai Ut",
-   "priceFt": 175000,
-   "firstSeen": "2026-08-18T15:01:12.707Z",
    "initial": false
   }
  ]
