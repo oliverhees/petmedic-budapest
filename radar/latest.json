@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-26T15:58:54.486Z",
+ "generatedAt": "2026-08-27T15:22:55.609Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 34,
  "items": [
+  {
+   "id": "782549",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-kerepesi-ut-35m2-1-szoba_782549",
+   "district": "XIV",
+   "m2": 35,
+   "rooms": "1",
+   "street": "Kerepesi Ut",
+   "priceFt": 200000,
+   "firstSeen": "2026-08-27T15:22:55.609Z",
+   "initial": false
+  },
   {
    "id": "782478",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-bosnyak-ter-40m2-2-szoba_782478",
