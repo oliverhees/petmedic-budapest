@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-03T17:57:08.462Z",
+ "generatedAt": "2026-09-04T08:57:18.492Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 35,
  "items": [
+  {
+   "id": "499145",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-marton-utca-30m2-1-szoba_499145",
+   "district": "IX",
+   "m2": 30,
+   "rooms": "1",
+   "street": "Marton Utca",
+   "priceFt": 160000,
+   "firstSeen": "2026-09-04T08:57:18.492Z",
+   "initial": false
+  },
   {
    "id": "782734",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-tihany-utca-46m2-2-szoba_782734",
