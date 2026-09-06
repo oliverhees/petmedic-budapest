@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-06T08:45:43.230Z",
+ "generatedAt": "2026-09-06T17:14:21.089Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 33,
  "items": [
+  {
+   "id": "782973",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-ormos-utca-31m2-1-szoba_782973",
+   "district": "XIV",
+   "m2": 31,
+   "rooms": "1",
+   "street": "Ormos Utca",
+   "priceFt": 200000,
+   "firstSeen": "2026-09-06T17:14:21.089Z",
+   "initial": false
+  },
   {
    "id": "499145",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-marton-utca-30m2-1-szoba_499145",
