@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-07T09:32:50.650Z",
+ "generatedAt": "2026-09-07T18:48:24.751Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 33,
  "items": [
+  {
+   "id": "783026",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-vajda-peter-utca-38m2-1-szoba_783026",
+   "district": "VIII",
+   "m2": 38,
+   "rooms": "1",
+   "street": "Vajda Peter Utca",
+   "priceFt": 160000,
+   "firstSeen": "2026-09-07T18:48:24.751Z",
+   "initial": false
+  },
   {
    "id": "782973",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-ormos-utca-31m2-1-szoba_782973",
@@ -57,17 +68,6 @@
    "street": "Bosnyak Ter",
    "priceFt": 200000,
    "firstSeen": "2026-08-26T05:03:47.835Z",
-   "initial": false
-  },
-  {
-   "id": "782409",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-bosnyak-ter-37m2-1-szoba_782409",
-   "district": "XIV",
-   "m2": 37,
-   "rooms": "1",
-   "street": "Bosnyak Ter",
-   "priceFt": 190000,
-   "firstSeen": "2026-08-24T15:09:55.431Z",
    "initial": false
   }
  ]
