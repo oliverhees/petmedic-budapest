@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-08T08:57:41.894Z",
+ "generatedAt": "2026-09-08T17:59:29.146Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 34,
+ "newCount": 1,
+ "totalMatching": 35,
  "items": [
+  {
+   "id": "783049",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-victor-hugo-utca-38m2-1-szoba_783049",
+   "district": "XIII",
+   "m2": 38,
+   "rooms": "1",
+   "street": "Victor Hugo Utca",
+   "priceFt": 199000,
+   "firstSeen": "2026-09-08T17:59:29.146Z",
+   "initial": false
+  },
   {
    "id": "783026",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-vajda-peter-utca-38m2-1-szoba_783026",
