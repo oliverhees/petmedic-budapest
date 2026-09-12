@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-12T08:44:16.338Z",
+ "generatedAt": "2026-09-12T17:21:00.267Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 34,
+ "newCount": 1,
+ "totalMatching": 35,
  "items": [
+  {
+   "id": "783202",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-desi-huber-utca-52m2-2-szoba_783202",
+   "district": "IX",
+   "m2": 52,
+   "rooms": "2",
+   "street": "Desi Huber Utca",
+   "priceFt": 170000,
+   "firstSeen": "2026-09-12T17:21:00.267Z",
+   "initial": false
+  },
   {
    "id": "741200",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-visegradi--30m2-1-szoba_741200",
