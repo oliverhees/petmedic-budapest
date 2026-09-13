@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-12T17:21:00.267Z",
+ "generatedAt": "2026-09-13T09:39:08.326Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -15,6 +15,17 @@
  "newCount": 1,
  "totalMatching": 35,
  "items": [
+  {
+   "id": "520880",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-visegradi-utca-27m2-1-szoba_520880",
+   "district": "XIII",
+   "m2": 27,
+   "rooms": "1",
+   "street": "Visegradi Utca",
+   "priceFt": 200000,
+   "firstSeen": "2026-09-13T09:39:08.326Z",
+   "initial": false
+  },
   {
    "id": "783202",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-desi-huber-utca-52m2-2-szoba_783202",
