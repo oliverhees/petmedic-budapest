@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-14T10:01:45.113Z",
+ "generatedAt": "2026-09-14T19:31:22.168Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -68,17 +68,6 @@
    "street": "Ormos Utca",
    "priceFt": 200000,
    "firstSeen": "2026-09-06T17:14:21.089Z",
-   "initial": false
-  },
-  {
-   "id": "499145",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-marton-utca-30m2-1-szoba_499145",
-   "district": "IX",
-   "m2": 30,
-   "rooms": "1",
-   "street": "Marton Utca",
-   "priceFt": 160000,
-   "firstSeen": "2026-09-04T08:57:18.492Z",
    "initial": false
   },
   {
