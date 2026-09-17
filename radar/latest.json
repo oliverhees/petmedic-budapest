@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-17T09:34:16.731Z",
+ "generatedAt": "2026-09-17T18:25:36.829Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -13,7 +13,7 @@
   "maxM2": 60
  },
  "newCount": 0,
- "totalMatching": 32,
+ "totalMatching": 31,
  "items": [
   {
    "id": "783202",
@@ -24,17 +24,6 @@
    "street": "Desi Huber Utca",
    "priceFt": 170000,
    "firstSeen": "2026-09-12T17:21:00.267Z",
-   "initial": false
-  },
-  {
-   "id": "741200",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-visegradi--30m2-1-szoba_741200",
-   "district": "XIII",
-   "m2": 30,
-   "rooms": "1",
-   "street": "Visegradi",
-   "priceFt": 210000,
-   "firstSeen": "2026-09-11T09:00:40.583Z",
    "initial": false
   },
   {
