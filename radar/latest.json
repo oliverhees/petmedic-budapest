@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-20T09:23:21.830Z",
+ "generatedAt": "2026-09-20T17:33:57.513Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -35,17 +35,6 @@
    "street": "Vajda Peter Utca",
    "priceFt": 160000,
    "firstSeen": "2026-09-07T18:48:24.751Z",
-   "initial": false
-  },
-  {
-   "id": "782973",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-ormos-utca-31m2-1-szoba_782973",
-   "district": "XIV",
-   "m2": 31,
-   "rooms": "1",
-   "street": "Ormos Utca",
-   "priceFt": 200000,
-   "firstSeen": "2026-09-06T17:14:21.089Z",
    "initial": false
   }
  ]
