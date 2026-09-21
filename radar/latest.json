@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-21T10:07:00.888Z",
+ "generatedAt": "2026-09-21T19:38:46.716Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -13,7 +13,7 @@
   "maxM2": 60
  },
  "newCount": 0,
- "totalMatching": 31,
+ "totalMatching": 29,
  "items": [
   {
    "id": "783202",
@@ -24,17 +24,6 @@
    "street": "Desi Huber Utca",
    "priceFt": 170000,
    "firstSeen": "2026-09-12T17:21:00.267Z",
-   "initial": false
-  },
-  {
-   "id": "783026",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-vajda-peter-utca-38m2-1-szoba_783026",
-   "district": "VIII",
-   "m2": 38,
-   "rooms": "1",
-   "street": "Vajda Peter Utca",
-   "priceFt": 160000,
-   "firstSeen": "2026-09-07T18:48:24.751Z",
    "initial": false
   }
  ]
