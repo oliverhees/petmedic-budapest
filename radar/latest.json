@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-26T09:27:16.706Z",
+ "generatedAt": "2026-09-26T17:53:12.626Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,18 +12,18 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 10,
+ "newCount": 1,
+ "totalMatching": 9,
  "items": [
   {
-   "id": "783202",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-desi-huber-utca-52m2-2-szoba_783202",
-   "district": "IX",
-   "m2": 52,
-   "rooms": "2",
-   "street": "Desi Huber Utca",
-   "priceFt": 170000,
-   "firstSeen": "2026-09-12T17:21:00.267Z",
+   "id": "783772",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-bolgarkertesz-utca-38m2-1-szoba_783772",
+   "district": "XIV",
+   "m2": 38,
+   "rooms": "1",
+   "street": "Bolgarkertesz Utca",
+   "priceFt": 190000,
+   "firstSeen": "2026-09-26T17:53:12.626Z",
    "initial": false
   }
  ]
