@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-04T18:16:32.219Z",
+ "generatedAt": "2026-10-05T11:43:07.158Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 11,
  "items": [
+  {
+   "id": "784041",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIX-kerulet-jokai-utca-51m2-1-szoba_784041",
+   "district": "XIX",
+   "m2": 51,
+   "rooms": "1",
+   "street": "Jokai Utca",
+   "priceFt": 200000,
+   "firstSeen": "2026-10-05T11:43:07.158Z",
+   "initial": false
+  },
   {
    "id": "783772",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-bolgarkertesz-utca-38m2-1-szoba_783772",
