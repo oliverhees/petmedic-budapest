@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-06T11:24:57.649Z",
+ "generatedAt": "2026-10-06T19:42:11.938Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 12,
  "items": [
+  {
+   "id": "784095",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-tihany-utca-46m2-2-szoba_784095",
+   "district": "XIV",
+   "m2": 46,
+   "rooms": "2",
+   "street": "Tihany Utca",
+   "priceFt": 220000,
+   "firstSeen": "2026-10-06T19:42:11.938Z",
+   "initial": false
+  },
   {
    "id": "784041",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIX-kerulet-jokai-utca-51m2-1-szoba_784041",
