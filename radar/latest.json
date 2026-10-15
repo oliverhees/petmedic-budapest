@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-14T18:47:44.212Z",
+ "generatedAt": "2026-10-15T09:16:48.567Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 12,
+ "newCount": 1,
+ "totalMatching": 13,
  "items": [
+  {
+   "id": "784453",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-raoul-wallenberg-utca-41m2-2-szoba_784453",
+   "district": "XIII",
+   "m2": 41,
+   "rooms": "2",
+   "street": "Raoul Wallenberg Utca",
+   "priceFt": 139000,
+   "firstSeen": "2026-10-15T09:16:48.567Z",
+   "initial": false
+  },
   {
    "id": "784287",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-gyarmat-utca-37m2-1-szoba_784287",
