@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-15T09:16:48.567Z",
+ "generatedAt": "2026-10-15T18:29:27.074Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,8 +12,8 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 1,
- "totalMatching": 13,
+ "newCount": 0,
+ "totalMatching": 12,
  "items": [
   {
    "id": "784453",
