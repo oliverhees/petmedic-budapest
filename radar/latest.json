@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-16T09:10:12.655Z",
+ "generatedAt": "2026-10-16T18:15:35.200Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 12,
+ "newCount": 1,
+ "totalMatching": 13,
  "items": [
+  {
+   "id": "732313",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szabolcs-utca-27m2-1-szoba_732313",
+   "district": "XIII",
+   "m2": 27,
+   "rooms": "1",
+   "street": "Szabolcs Utca",
+   "priceFt": 220000,
+   "firstSeen": "2026-10-16T18:15:35.200Z",
+   "initial": false
+  },
   {
    "id": "784453",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-raoul-wallenberg-utca-41m2-2-szoba_784453",
