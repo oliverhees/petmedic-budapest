@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-19T10:07:13.152Z",
+ "generatedAt": "2026-10-19T20:04:20.255Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -13,8 +13,19 @@
   "maxM2": 60
  },
  "newCount": 1,
- "totalMatching": 14,
+ "totalMatching": 15,
  "items": [
+  {
+   "id": "784595",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szent-laaszlo-ut--30m2-1-szoba_784595",
+   "district": "XIII",
+   "m2": 30,
+   "rooms": "1",
+   "street": "Szent Laaszlo Ut",
+   "priceFt": 200000,
+   "firstSeen": "2026-10-19T20:04:20.255Z",
+   "initial": false
+  },
   {
    "id": "784556",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-magdolna-utca-30m2-1-szoba_784556",
@@ -35,17 +46,6 @@
    "street": "Mester Utca",
    "priceFt": 220000,
    "firstSeen": "2026-10-17T17:25:29.721Z",
-   "initial": false
-  },
-  {
-   "id": "732313",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szabolcs-utca-27m2-1-szoba_732313",
-   "district": "XIII",
-   "m2": 27,
-   "rooms": "1",
-   "street": "Szabolcs Utca",
-   "priceFt": 220000,
-   "firstSeen": "2026-10-16T18:15:35.200Z",
    "initial": false
   },
   {
@@ -90,17 +90,6 @@
    "street": "Tihany Utca",
    "priceFt": 220000,
    "firstSeen": "2026-10-06T19:42:11.938Z",
-   "initial": false
-  },
-  {
-   "id": "784041",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIX-kerulet-jokai-utca-51m2-1-szoba_784041",
-   "district": "XIX",
-   "m2": 51,
-   "rooms": "1",
-   "street": "Jokai Utca",
-   "priceFt": 200000,
-   "firstSeen": "2026-10-05T11:43:07.158Z",
    "initial": false
   }
  ]
