@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-18T17:27:57.848Z",
+ "generatedAt": "2026-10-19T10:07:13.152Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 13,
+ "newCount": 1,
+ "totalMatching": 14,
  "items": [
+  {
+   "id": "784556",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-magdolna-utca-30m2-1-szoba_784556",
+   "district": "VIII",
+   "m2": 30,
+   "rooms": "1",
+   "street": "Magdolna Utca",
+   "priceFt": 160000,
+   "firstSeen": "2026-10-19T10:07:13.152Z",
+   "initial": false
+  },
   {
    "id": "784021",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-mester-utca-32m2-1-szoba_784021",
