@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-20T18:36:06.315Z",
+ "generatedAt": "2026-10-21T09:28:44.393Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 16,
+ "newCount": 1,
+ "totalMatching": 17,
  "items": [
+  {
+   "id": "764163",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szent-laszlo-ut-30m2-1-szoba_764163",
+   "district": "XIII",
+   "m2": 30,
+   "rooms": "1",
+   "street": "Szent Laszlo Ut",
+   "priceFt": 220000,
+   "firstSeen": "2026-10-21T09:28:44.393Z",
+   "initial": false
+  },
   {
    "id": "784595",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szent-laaszlo-ut--30m2-1-szoba_784595",
@@ -79,17 +90,6 @@
    "street": "Obester Utca",
    "priceFt": 220000,
    "firstSeen": "2026-10-11T19:05:51.874Z",
-   "initial": false
-  },
-  {
-   "id": "784095",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-tihany-utca-46m2-2-szoba_784095",
-   "district": "XIV",
-   "m2": 46,
-   "rooms": "2",
-   "street": "Tihany Utca",
-   "priceFt": 220000,
-   "firstSeen": "2026-10-06T19:42:11.938Z",
    "initial": false
   }
  ]
