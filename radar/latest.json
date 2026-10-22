@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-21T18:48:32.533Z",
+ "generatedAt": "2026-10-22T09:31:52.184Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 19,
  "items": [
+  {
+   "id": "784687",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-dugonics-utca-50m2-2-szoba_784687",
+   "district": "VIII",
+   "m2": 50,
+   "rooms": "2",
+   "street": "Dugonics Utca",
+   "priceFt": 200000,
+   "firstSeen": "2026-10-22T09:31:52.184Z",
+   "initial": false
+  },
   {
    "id": "764163",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szent-laszlo-ut-30m2-1-szoba_764163",
@@ -78,17 +89,6 @@
    "rooms": "1",
    "street": "Gyarmat Utca",
    "priceFt": 190000,
-   "firstSeen": "2026-10-11T19:05:51.874Z",
-   "initial": false
-  },
-  {
-   "id": "784254",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-obester-utca-52m2-2-szoba_784254",
-   "district": "IX",
-   "m2": 52,
-   "rooms": "2",
-   "street": "Obester Utca",
-   "priceFt": 220000,
    "firstSeen": "2026-10-11T19:05:51.874Z",
    "initial": false
   }
