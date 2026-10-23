@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-23T09:27:51.180Z",
+ "generatedAt": "2026-10-23T18:36:15.377Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 18,
  "items": [
+  {
+   "id": "784742",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-nepfurdo-utca-42m2-2-szoba_784742",
+   "district": "XIII",
+   "m2": 42,
+   "rooms": "2",
+   "street": "Nepfurdo Utca",
+   "priceFt": null,
+   "firstSeen": "2026-10-23T18:36:15.377Z",
+   "initial": false
+  },
   {
    "id": "784687",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-dugonics-utca-50m2-2-szoba_784687",
