@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-22T18:42:10.121Z",
+ "generatedAt": "2026-10-23T09:27:51.180Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -13,7 +13,7 @@
   "maxM2": 60
  },
  "newCount": 0,
- "totalMatching": 19,
+ "totalMatching": 18,
  "items": [
   {
    "id": "784687",
@@ -57,17 +57,6 @@
    "street": "Magdolna Utca",
    "priceFt": 160000,
    "firstSeen": "2026-10-19T10:07:13.152Z",
-   "initial": false
-  },
-  {
-   "id": "784021",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-mester-utca-32m2-1-szoba_784021",
-   "district": "IX",
-   "m2": 32,
-   "rooms": "1",
-   "street": "Mester Utca",
-   "priceFt": 220000,
-   "firstSeen": "2026-10-17T17:25:29.721Z",
    "initial": false
   },
   {
