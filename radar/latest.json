@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T08:59:25.843Z",
+ "generatedAt": "2026-10-24T17:31:02.223Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 18,
+ "newCount": 1,
+ "totalMatching": 17,
  "items": [
+  {
+   "id": "784756",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-vaci-ut-44m2-2-szoba_784756",
+   "district": "XIII",
+   "m2": 44,
+   "rooms": "2",
+   "street": "Vaci Ut",
+   "priceFt": 220000,
+   "firstSeen": "2026-10-24T17:31:02.223Z",
+   "initial": false
+  },
   {
    "id": "784742",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-nepfurdo-utca-42m2-2-szoba_784742",
@@ -46,17 +57,6 @@
    "street": "Szent Laaszlo Ut",
    "priceFt": 200000,
    "firstSeen": "2026-10-19T20:04:20.255Z",
-   "initial": false
-  },
-  {
-   "id": "784556",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-magdolna-utca-30m2-1-szoba_784556",
-   "district": "VIII",
-   "m2": 30,
-   "rooms": "1",
-   "street": "Magdolna Utca",
-   "priceFt": 160000,
-   "firstSeen": "2026-10-19T10:07:13.152Z",
    "initial": false
   },
   {
