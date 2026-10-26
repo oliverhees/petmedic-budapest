@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T10:21:53.652Z",
+ "generatedAt": "2026-10-26T20:02:54.545Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 17,
  "items": [
+  {
+   "id": "784834",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szent-laszlo-ut-30m2-1-szoba_784834",
+   "district": "XIII",
+   "m2": 30,
+   "rooms": "1",
+   "street": "Szent Laszlo Ut",
+   "priceFt": 218000,
+   "firstSeen": "2026-10-26T20:02:54.545Z",
+   "initial": false
+  },
   {
    "id": "784756",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-vaci-ut-44m2-2-szoba_784756",
@@ -57,17 +68,6 @@
    "street": "Szent Laaszlo Ut",
    "priceFt": 200000,
    "firstSeen": "2026-10-19T20:04:20.255Z",
-   "initial": false
-  },
-  {
-   "id": "784453",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-raoul-wallenberg-utca-41m2-2-szoba_784453",
-   "district": "XIII",
-   "m2": 41,
-   "rooms": "2",
-   "street": "Raoul Wallenberg Utca",
-   "priceFt": 139000,
-   "firstSeen": "2026-10-15T09:16:48.567Z",
    "initial": false
   }
  ]
