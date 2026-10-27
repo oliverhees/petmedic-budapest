@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T20:02:54.545Z",
+ "generatedAt": "2026-10-27T09:56:13.247Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -15,6 +15,17 @@
  "newCount": 1,
  "totalMatching": 17,
  "items": [
+  {
+   "id": "784839",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szent-laszlo-ut-30m2-1-szoba_784839",
+   "district": "XIII",
+   "m2": 30,
+   "rooms": "1",
+   "street": "Szent Laszlo Ut",
+   "priceFt": null,
+   "firstSeen": "2026-10-27T09:56:13.247Z",
+   "initial": false
+  },
   {
    "id": "784834",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szent-laszlo-ut-30m2-1-szoba_784834",
@@ -57,17 +68,6 @@
    "street": "Dugonics Utca",
    "priceFt": 200000,
    "firstSeen": "2026-10-22T09:31:52.184Z",
-   "initial": false
-  },
-  {
-   "id": "784595",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szent-laaszlo-ut--30m2-1-szoba_784595",
-   "district": "XIII",
-   "m2": 30,
-   "rooms": "1",
-   "street": "Szent Laaszlo Ut",
-   "priceFt": 200000,
-   "firstSeen": "2026-10-19T20:04:20.255Z",
    "initial": false
   }
  ]
