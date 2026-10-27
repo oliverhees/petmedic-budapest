@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-27T09:56:13.247Z",
+ "generatedAt": "2026-10-27T19:32:38.630Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -15,6 +15,17 @@
  "newCount": 1,
  "totalMatching": 17,
  "items": [
+  {
+   "id": "784875",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-titel-utca-37m2-1-szoba_784875",
+   "district": "XIV",
+   "m2": 37,
+   "rooms": "1",
+   "street": "Titel Utca",
+   "priceFt": 190000,
+   "firstSeen": "2026-10-27T19:32:38.630Z",
+   "initial": false
+  },
   {
    "id": "784839",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-szent-laszlo-ut-30m2-1-szoba_784839",
