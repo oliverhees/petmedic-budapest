@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-28T19:44:20.276Z",
+ "generatedAt": "2026-10-29T11:00:15.213Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 16,
  "items": [
+  {
+   "id": "784924",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-mariassy-utca-28m2-1-szoba_784924",
+   "district": "IX",
+   "m2": 28,
+   "rooms": "1",
+   "street": "Mariassy Utca",
+   "priceFt": 220000,
+   "firstSeen": "2026-10-29T11:00:15.213Z",
+   "initial": false
+  },
   {
    "id": "784875",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-titel-utca-37m2-1-szoba_784875",
