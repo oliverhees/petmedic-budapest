@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-30T10:57:32.356Z",
+ "generatedAt": "2026-10-30T19:35:01.605Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 16,
  "items": [
+  {
+   "id": "784974",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-angyal-utca-37m2-1-szoba_784974",
+   "district": "IX",
+   "m2": 37,
+   "rooms": "1",
+   "street": "Angyal Utca",
+   "priceFt": 220000,
+   "firstSeen": "2026-10-30T19:35:01.605Z",
+   "initial": false
+  },
   {
    "id": "784924",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-mariassy-utca-28m2-1-szoba_784924",
