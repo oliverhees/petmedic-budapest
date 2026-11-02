@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-02T12:43:35.910Z",
+ "generatedAt": "2026-11-02T22:50:46.109Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -13,8 +13,19 @@
   "maxM2": 60
  },
  "newCount": 1,
- "totalMatching": 14,
+ "totalMatching": 16,
  "items": [
+  {
+   "id": "785058",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-keszkeno-utca-34m2-2-szoba_785058",
+   "district": "XIII",
+   "m2": 34,
+   "rooms": "2",
+   "street": "Keszkeno Utca",
+   "priceFt": 210000,
+   "firstSeen": "2026-11-02T22:50:46.109Z",
+   "initial": false
+  },
   {
    "id": "785037",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-lehel-utca-25m2-1-szoba_785037",
