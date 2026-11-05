@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-04T20:52:55.602Z",
+ "generatedAt": "2026-11-05T12:37:18.627Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -15,17 +15,6 @@
  "newCount": 0,
  "totalMatching": 18,
  "items": [
-  {
-   "id": "785037",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-lehel-utca-25m2-1-szoba_785037",
-   "district": "XIII",
-   "m2": 25,
-   "rooms": "1",
-   "street": "Lehel Utca",
-   "priceFt": 200000,
-   "firstSeen": "2026-11-02T12:43:35.910Z",
-   "initial": false
-  },
   {
    "id": "784974",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-angyal-utca-37m2-1-szoba_784974",
