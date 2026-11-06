@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-05T21:09:33.451Z",
+ "generatedAt": "2026-11-06T12:20:03.516Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -13,7 +13,7 @@
   "maxM2": 60
  },
  "newCount": 0,
- "totalMatching": 17,
+ "totalMatching": 16,
  "items": [
   {
    "id": "784974",
@@ -46,17 +46,6 @@
    "street": "Szent Laszlo Ut",
    "priceFt": 218000,
    "firstSeen": "2026-10-26T20:02:54.545Z",
-   "initial": false
-  },
-  {
-   "id": "784756",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-vaci-ut-44m2-2-szoba_784756",
-   "district": "XIII",
-   "m2": 44,
-   "rooms": "2",
-   "street": "Vaci Ut",
-   "priceFt": 220000,
-   "firstSeen": "2026-10-24T17:31:02.223Z",
    "initial": false
   }
  ]
