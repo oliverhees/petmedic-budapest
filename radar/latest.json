@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-12T21:31:24.068Z",
+ "generatedAt": "2026-11-13T12:28:26.024Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 18,
  "items": [
+  {
+   "id": "785533",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-banki-donat--38m2-1-szoba_785533",
+   "district": "XIV",
+   "m2": 38,
+   "rooms": "1",
+   "street": "Banki Donat",
+   "priceFt": 190000,
+   "firstSeen": "2026-11-13T12:28:26.024Z",
+   "initial": false
+  },
   {
    "id": "785491",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-prater-utca-35m2-2-szoba_785491",
