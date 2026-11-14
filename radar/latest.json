@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T20:56:51.035Z",
+ "generatedAt": "2026-11-14T11:39:40.698Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 18,
  "items": [
+  {
+   "id": "785570",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-kis-gomb-utca-40m2-1-szoba_785570",
+   "district": "XIII",
+   "m2": 40,
+   "rooms": "1",
+   "street": "Kis Gomb Utca",
+   "priceFt": 220000,
+   "firstSeen": "2026-11-14T11:39:40.698Z",
+   "initial": false
+  },
   {
    "id": "785533",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-banki-donat--38m2-1-szoba_785533",
