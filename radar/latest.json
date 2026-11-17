@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-16T23:27:42.074Z",
+ "generatedAt": "2026-11-17T13:42:45.828Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,31 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 2,
  "totalMatching": 19,
  "items": [
+  {
+   "id": "671884",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-pottyos-utca-39m2-2-szoba_671884",
+   "district": "IX",
+   "m2": 39,
+   "rooms": "2",
+   "street": "Pottyos Utca",
+   "priceFt": 220000,
+   "firstSeen": "2026-11-17T13:42:45.828Z",
+   "initial": false
+  },
+  {
+   "id": "785682",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-bolgarkertesz-utca-52m2-2-szoba_785682",
+   "district": "XIV",
+   "m2": 52,
+   "rooms": "2",
+   "street": "Bolgarkertesz Utca",
+   "priceFt": 200000,
+   "firstSeen": "2026-11-17T13:42:45.828Z",
+   "initial": false
+  },
   {
    "id": "785611",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-bolgarkertesz-utca-52m2-2-szoba_785611",
@@ -24,17 +46,6 @@
    "street": "Bolgarkertesz Utca",
    "priceFt": 200000,
    "firstSeen": "2026-11-15T19:53:22.471Z",
-   "initial": false
-  },
-  {
-   "id": "785570",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-kis-gomb-utca-40m2-1-szoba_785570",
-   "district": "XIII",
-   "m2": 40,
-   "rooms": "1",
-   "street": "Kis Gomb Utca",
-   "priceFt": 220000,
-   "firstSeen": "2026-11-14T11:39:40.698Z",
    "initial": false
   },
   {
