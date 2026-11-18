@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-17T22:32:27.254Z",
+ "generatedAt": "2026-11-18T13:17:08.090Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -57,17 +57,6 @@
    "street": "Banki Donat",
    "priceFt": 190000,
    "firstSeen": "2026-11-13T12:28:26.024Z",
-   "initial": false
-  },
-  {
-   "id": "785491",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-VIII-kerulet-prater-utca-35m2-2-szoba_785491",
-   "district": "VIII",
-   "m2": 35,
-   "rooms": "2",
-   "street": "Prater Utca",
-   "priceFt": 215000,
-   "firstSeen": "2026-11-12T13:01:31.837Z",
    "initial": false
   }
  ]
