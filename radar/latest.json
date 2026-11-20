@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-20T13:23:38.087Z",
+ "generatedAt": "2026-11-20T21:54:34.924Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,8 +12,8 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 1,
- "totalMatching": 19,
+ "newCount": 0,
+ "totalMatching": 18,
  "items": [
   {
    "id": "785794",
@@ -24,17 +24,6 @@
    "street": "Sobieski Janos Utca",
    "priceFt": 180000,
    "firstSeen": "2026-11-20T13:23:38.087Z",
-   "initial": false
-  },
-  {
-   "id": "785682",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-bolgarkertesz-utca-52m2-2-szoba_785682",
-   "district": "XIV",
-   "m2": 52,
-   "rooms": "2",
-   "street": "Bolgarkertesz Utca",
-   "priceFt": 200000,
-   "firstSeen": "2026-11-17T13:42:45.828Z",
    "initial": false
   },
   {
