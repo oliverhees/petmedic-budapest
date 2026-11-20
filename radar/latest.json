@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-19T22:21:29.921Z",
+ "generatedAt": "2026-11-20T13:23:38.087Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,18 +12,18 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
+ "newCount": 1,
  "totalMatching": 19,
  "items": [
   {
-   "id": "671884",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-pottyos-utca-39m2-2-szoba_671884",
+   "id": "785794",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-sobieski-janos-utca-30m2-1-szoba_785794",
    "district": "IX",
-   "m2": 39,
-   "rooms": "2",
-   "street": "Pottyos Utca",
-   "priceFt": 220000,
-   "firstSeen": "2026-11-17T13:42:45.828Z",
+   "m2": 30,
+   "rooms": "1",
+   "street": "Sobieski Janos Utca",
+   "priceFt": 180000,
+   "firstSeen": "2026-11-20T13:23:38.087Z",
    "initial": false
   },
   {
