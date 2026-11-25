@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-24T23:34:55.977Z",
+ "generatedAt": "2026-11-25T14:45:24.857Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,9 +12,20 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 0,
- "totalMatching": 18,
+ "newCount": 1,
+ "totalMatching": 19,
  "items": [
+  {
+   "id": "785224",
+   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIII-kerulet-vaci-ut-42m2-1-szoba_785224",
+   "district": "XIII",
+   "m2": 42,
+   "rooms": "1",
+   "street": "Vaci Ut",
+   "priceFt": 180000,
+   "firstSeen": "2026-11-25T14:45:24.857Z",
+   "initial": false
+  },
   {
    "id": "785794",
    "url": "https://www.alberlet.hu/kiado-alberlet/budapest-IX-kerulet-sobieski-janos-utca-30m2-1-szoba_785794",
