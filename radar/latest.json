@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-26T23:10:58.944Z",
+ "generatedAt": "2026-11-27T14:07:33.907Z",
  "criteria": {
   "districts": [
    "VIII",
@@ -12,7 +12,7 @@
   "minM2": 25,
   "maxM2": 60
  },
- "newCount": 1,
+ "newCount": 0,
  "totalMatching": 19,
  "items": [
   {
@@ -57,17 +57,6 @@
    "street": "Bolgarkertesz Utca",
    "priceFt": 200000,
    "firstSeen": "2026-11-15T19:53:22.471Z",
-   "initial": false
-  },
-  {
-   "id": "785533",
-   "url": "https://www.alberlet.hu/kiado-alberlet/budapest-XIV-kerulet-banki-donat--38m2-1-szoba_785533",
-   "district": "XIV",
-   "m2": 38,
-   "rooms": "1",
-   "street": "Banki Donat",
-   "priceFt": 190000,
-   "firstSeen": "2026-11-13T12:28:26.024Z",
    "initial": false
   }
  ]
